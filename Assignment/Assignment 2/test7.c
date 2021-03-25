@@ -8,7 +8,7 @@ int i;
 }t1,t2,t3,t4;
  
 // 输出字符的十六进制编码
-voidchar_hex_out(char a)
+void char_hex_out(char a)
 {
 const char HEX[] = "0123456789ABCDEF";
 int index = a & 0x0F;
@@ -16,7 +16,7 @@ printf("%c%c",HEX[(a&0xF0)>>4],HEX[a&0x0F]);
 }
  
 // 输出4个字节数据的十六进制编码，可用于输出4字节变量的机器码
-voidfour_byte_out(char * addr)
+void four_byte_out(char * addr)
 {
 //输出指针变量的值，指针本质上是内存地址，是一个无符号数
 //假设采用小端方式存储
@@ -27,7 +27,7 @@ char_hex_out(* (addr+0));
 printf("\n");
 }
  
-voidfloat_add_overflow()
+void float_add_overflow()
 {
 t1.i = 0x7F000000;
 t2.i = 0x7F000000;
@@ -42,7 +42,7 @@ printf("t2=%.60f\n",t2.f);
 printf("t1+t2=%.60f\n",t3.f);
 }
  
-voidfloat_sub_overflow()
+void float_sub_overflow()
 {
 t1.i = 0x00C00000;
 t2.i = 0x00800000;

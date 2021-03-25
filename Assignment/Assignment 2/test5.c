@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-voidtest_float_cal()
+void test_float_cal()
 {
 	float a,b,c;
 	int d;
@@ -15,7 +15,7 @@ voidtest_float_cal()
 		printf("\nFloat a=3.3/1.1==3.0");
 	}
 }
-voidtest_double_cal()
+void test_double_cal()
 {
 	double a,b,c;
 	int d;
