@@ -1,0 +1,1 @@
+-wto "422350fbba2b4e1aaf2dcc160b7d8dbc" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "barrelShifter_behav" "xil_defaultlib.barrelShifter" "xil_defaultlib.glbl" -log "elaborate.log" 
