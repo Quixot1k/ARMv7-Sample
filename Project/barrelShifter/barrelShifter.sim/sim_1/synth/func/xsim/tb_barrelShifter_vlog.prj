@@ -1,7 +1,0 @@
-# compile verilog/system verilog design source files
-verilog xil_defaultlib  \
-"tb_barrelShifter_func_synth.v" \
-"../../../../../barrelShifter.srcs/sim_1/new/tb_barrelShifter.v" \
-
-# Do not sort compile order
-nosort

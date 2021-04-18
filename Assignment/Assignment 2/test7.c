@@ -37,9 +37,9 @@ four_byte_out((char*)(&t1.f));
 four_byte_out((char*)(&t2.f));
 four_byte_out((char*)(&t3.f));
  
-printf("t1=%.60f\n",t1.f);
-printf("t2=%.60f\n",t2.f);
-printf("t1+t2=%.60f\n",t3.f);
+printf("t1.f=%.60f\n",t1.f);
+printf("t2.f=%.60f\n",t2.f);
+printf("t1.f+t2.f=%.60f\n",t3.f);
 }
  
 void float_sub_overflow()
@@ -52,14 +52,14 @@ four_byte_out((char*)(&t1.f));
 four_byte_out((char*)(&t2.f));
 four_byte_out((char*)(&t3.f));
  
-printf("t1=%.61f\n",t1.f);
-printf("t2=%.61f\n",t2.f);
-printf("t1-t2=%.61f\n",t3.f);
+printf("t1.f=%.60f\n",t1.f);
+printf("t2.f=%.60f\n",t2.f);
+printf("t1.f-t2.f=%.60f\n",t3.f);
 }
  
 int main()
 {
-float_add_overflow();
+// float_add_overflow();
 float_sub_overflow();
 return 0;
 }

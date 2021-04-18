@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/GAO/Desktop/Computer-Orgnization/Project/barrelShifter/barrelShifter.sim/sim_1/synth/func/xsim/tb_barrelShifter_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Board
+INFO: [VRFC 10-311] analyzing module Display
+INFO: [VRFC 10-311] analyzing module barrelShifter
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/GAO/Desktop/Computer-Orgnization/Project/barrelShifter/barrelShifter.srcs/sources_1/new/barrelShifter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module barrelShifter
+ERROR: [VRFC 10-2989] 'SHFT_OP' is not declared [C:/Users/GAO/Desktop/Computer-Orgnization/Project/barrelShifter/barrelShifter.srcs/sources_1/new/barrelShifter.v:22]
+ERROR: [VRFC 10-3640] port 'SHIFT_OP' is not defined [C:/Users/GAO/Desktop/Computer-Orgnization/Project/barrelShifter/barrelShifter.srcs/sources_1/new/barrelShifter.v:26]
+ERROR: [VRFC 10-2865] module 'barrelShifter' ignored due to previous errors [C:/Users/GAO/Desktop/Computer-Orgnization/Project/barrelShifter/barrelShifter.srcs/sources_1/new/barrelShifter.v:22]
