@@ -1,0 +1,268 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Apr 19 12:26:04 2021
+# Process ID: 6608
+# Current directory: C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.runs/synth_1
+# Command line: vivado.exe -log Board.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Board.tcl
+# Log file: C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.runs/synth_1/Board.vds
+# Journal file: C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Board.tcl -notrace
+Command: synth_design -top Board -part xc7a100tfgg484-2L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tfgg484-2L
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 7028
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1116.613 ; gain = 27.797
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Board' [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/Board.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/Board.v:32]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/ALU.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/ALU.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (1#1) [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/ALU.v:3]
+WARNING: [Synth 8-689] width (32) of port connection 'Shift_Carry_Out' does not match port width (1) of module 'ALU' [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/Board.v:40]
+WARNING: [Synth 8-689] width (4) of port connection 'F' does not match port width (32) of module 'ALU' [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/Board.v:40]
+WARNING: [Synth 8-689] width (32) of port connection 'NZCV' does not match port width (4) of module 'ALU' [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/Board.v:40]
+INFO: [Synth 8-6157] synthesizing module 'Display' [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/Display.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Display' (2#1) [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/Display.v:3]
+WARNING: [Synth 8-7071] port 'count' of module 'Display' is unconnected for instance 'Display_Instance' [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/Board.v:46]
+WARNING: [Synth 8-7071] port 'digit' of module 'Display' is unconnected for instance 'Display_Instance' [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/Board.v:46]
+WARNING: [Synth 8-7023] instance 'Display_Instance' of module 'Display' has 6 connections declared, but only 4 given [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/Board.v:46]
+INFO: [Synth 8-6155] done synthesizing module 'Board' (3#1) [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/Board.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1168.441 ; gain = 79.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1168.441 ; gain = 79.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1168.441 ; gain = 79.625
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1168.441 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc]
+WARNING: [Vivado 12-507] No nets matched 'clk_IBUF'. [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:103]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:103]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[1]'. [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:104]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:104]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[2]'. [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:105]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:105]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[3]'. [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:106]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:106]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[4]'. [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:107]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:107]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[5]'. [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:108]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:108]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[6]'. [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Board_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Board_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1255.039 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1255.039 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1255.039 ; gain = 166.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tfgg484-2L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1255.039 ; gain = 166.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1255.039 ; gain = 166.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1255.039 ; gain = 166.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   33 Bit       Adders := 2     
+	   2 Input   33 Bit       Adders := 2     
+	   4 Input   33 Bit       Adders := 1     
+	   4 Input   32 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 2     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               11 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	  15 Input   32 Bit        Muxes := 3     
+	   4 Input   32 Bit        Muxes := 1     
+	  15 Input    2 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 1     
+	  15 Input    1 Bit        Muxes := 2     
+	   4 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1255.039 ; gain = 166.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1261.672 ; gain = 172.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1261.820 ; gain = 173.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1290.465 ; gain = 201.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1290.465 ; gain = 201.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1290.465 ; gain = 201.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1290.465 ; gain = 201.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1290.465 ; gain = 201.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1290.465 ; gain = 201.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1290.465 ; gain = 201.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |BUFG  |     5|
+|2     |LUT1  |     2|
+|3     |LUT2  |     6|
+|4     |LUT3  |     8|
+|5     |LUT4  |    38|
+|6     |LUT5  |     7|
+|7     |LUT6  |    25|
+|8     |MUXF7 |     4|
+|9     |FDRE  |   154|
+|10    |IBUF  |    37|
+|11    |OBUF  |    19|
+|12    |OBUFT |    25|
++------+------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1290.465 ; gain = 201.648
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:41 . Memory (MB): peak = 1290.465 ; gain = 115.051
+Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1290.465 ; gain = 201.648
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1300.172 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1307.176 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+23 Infos, 13 Warnings, 7 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 1307.176 ; gain = 218.359
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.runs/synth_1/Board.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Board_utilization_synth.rpt -pb Board_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 19 12:27:07 2021...
