@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/GAO/Desktop/Computer-Orgnization/Project/2.ALU/ALU.runs/synth_1/Board.tcl"
+  variable script "C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.runs/synth_1/Board.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,25 +70,27 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 4
+set_param chipscope.maxJobs 2
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tfgg484-2L
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/GAO/Desktop/Computer-Orgnization/Project/2.ALU/ALU.cache/wt [current_project]
-set_property parent.project_path C:/Users/GAO/Desktop/Computer-Orgnization/Project/2.ALU/ALU.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.cache/wt [current_project]
+set_property parent.project_path C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/GAO/Desktop/Computer-Orgnization/Project/2.ALU/ALU.cache/ip [current_project]
+set_property ip_output_repo c:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib -sv C:/Users/GAO/Desktop/Computer-Orgnization/Project/2.ALU/ALU.srcs/sources_1/new/ALU.v
+read_verilog -library xil_defaultlib -sv C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/ALU.v
 read_verilog -library xil_defaultlib {
-  C:/Users/GAO/Desktop/Computer-Orgnization/Project/2.ALU/ALU.srcs/sources_1/new/Display.v
-  C:/Users/GAO/Desktop/Computer-Orgnization/Project/2.ALU/ALU.srcs/sources_1/new/Board.v
+  C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/Display.v
+  C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/Board.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -99,8 +101,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/GAO/Desktop/Computer-Orgnization/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc
-set_property used_in_implementation false [get_files C:/Users/GAO/Desktop/Computer-Orgnization/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc]
+read_xdc C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc
+set_property used_in_implementation false [get_files C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

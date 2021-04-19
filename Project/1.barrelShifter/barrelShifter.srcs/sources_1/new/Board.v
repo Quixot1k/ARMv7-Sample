@@ -1,30 +1,10 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 04/12/2021 11:43:48 PM
-// Design Name: 
-// Module Name: Board
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module Board(sw, swb, led, clk, which, seg, enable);
-    input [1:32] sw; // switch
-    input [1:6] swb; // button
+    input [1:32] sw; //����
+    input [1:6] swb; //��ť
     
-    reg Shift_Data;
+    reg [32:1] Shift_Data;
     reg [8:1] Shift_Num;
     reg [3:1] SHFT_OP;
     wire [32:1] Shift_Out;
@@ -32,31 +12,29 @@ module Board(sw, swb, led, clk, which, seg, enable);
     
     output [1:32] led;
     
-    input clk; 
+    input clk; //ʱ��
     output [2:0] which;
     output [7:0] seg;
     output reg enable = 1; 
     
-    // Input operation
     always @(posedge swb[1]) 
-        Shift_Data  <= sw; 
+        Shift_Data  <= sw; //��ť1 ����Shift_Data
     always @(posedge swb[2]) 
-        {Shift_Num, SHFT_OP} <= sw[1:11]; 
-        
+        {Shift_Num,SHFT_OP} <= sw[1:11]; //��ť2 Shift_Num SHFT_OP 
     
-    barrelShifter barrelShifter(
+    barrelShifter Shift_Instance(
     .clk(clk),
     .SHFT_OP(SHFT_OP),
     .Shift_Data(Shift_Data),
     .Shift_Num(Shift_Num),
-    .Carry_flag(swb[3]),
+    .Carry_flag(swb[6]),
     .Shift_Out(Shift_Out),
-    .Shift_Carry_Out(Shift_Carry_Out)
-    );
+    .Shift_Carry_Out(Shift_Carry_Out));
     
     assign led = {Shift_Carry_Out,31'h00000000};
-      
-    Display Display(
+    
+    
+    Display Display_Instance(
     .clk(clk), 
     .data(Shift_Out),
     .which(which), 

@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/GAO/Desktop/Computer-Orgnization/Project/1.barrelShifter/barrelShifter.runs/impl_1/Board.tcl"
+  variable script "C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/1.barrelShifter/barrelShifter.runs/impl_1/Board.tcl"
   variable category "vivado_impl"
 }
 
@@ -122,22 +122,22 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 4
+  set_param chipscope.maxJobs 2
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a100tfgg484-2L
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/GAO/Desktop/Computer-Orgnization/Project/1.barrelShifter/barrelShifter.cache/wt [current_project]
-  set_property parent.project_path C:/Users/GAO/Desktop/Computer-Orgnization/Project/1.barrelShifter/barrelShifter.xpr [current_project]
-  set_property ip_output_repo C:/Users/GAO/Desktop/Computer-Orgnization/Project/1.barrelShifter/barrelShifter.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/1.barrelShifter/barrelShifter.cache/wt [current_project]
+  set_property parent.project_path C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/1.barrelShifter/barrelShifter.xpr [current_project]
+  set_property ip_output_repo C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/1.barrelShifter/barrelShifter.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/GAO/Desktop/Computer-Orgnization/Project/1.barrelShifter/barrelShifter.runs/synth_1/Board.dcp
+  add_files -quiet C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/1.barrelShifter/barrelShifter.runs/synth_1/Board.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/GAO/Desktop/Computer-Orgnization/Project/1.barrelShifter/barrelShifter.srcs/constrs_1/new/Board.xdc
+  read_xdc C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/1.barrelShifter/barrelShifter.srcs/constrs_1/new/Board.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

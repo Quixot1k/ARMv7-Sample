@@ -1,23 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 03/25/2021 01:50:33 AM
-// Design Name: 
-// Module Name: barrelShifter
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
 module barrelShifter(clk, Shift_Data, Shift_Num, SHFT_OP, Carry_flag, Shift_Out, Shift_Carry_Out);
     

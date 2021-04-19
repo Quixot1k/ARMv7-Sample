@@ -1,23 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 04/12/2021 11:42:21 PM
-// Design Name: 
-// Module Name: Display
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
 module Display(clk, data, which, seg, count, digit); 
     input clk; 
@@ -59,6 +40,5 @@ module Display(clk, data, which, seg, count, digit);
         4'hE: seg <= 8'b0110_0001;
         4'hF: seg <= 8'b0111_0001;
     endcase
-    
-endmodule // Display
 
+endmodule // Display

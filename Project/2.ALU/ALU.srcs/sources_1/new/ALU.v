@@ -1,24 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 04/13/2021 12:38:46 PM
-// Design Name: 
-// Module Name: ALU
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module ALU(clk, A, B, Shift_Carry_Out, ALU_OP, CF, VF, F, NZCV);
 
@@ -37,11 +17,9 @@ module ALU(clk, A, B, Shift_Carry_Out, ALU_OP, CF, VF, F, NZCV);
     // C32 FLAG
     reg C32;
     
-    
     // ALU_CF:
     // ADD: C32 = 1 -> C = 1
     // SUB: C32 = 1 -> C = 0
-    
     // ALU_VF: C32 ^ C31
     
     always@(posedge clk) begin
@@ -132,14 +110,9 @@ module ALU(clk, A, B, Shift_Carry_Out, ALU_OP, CF, VF, F, NZCV);
             NZCV[0] <= VF;end
      endcase
      // N = NZCV[3]
-     NZCV[3] = F[31];
+     NZCV[3] <= F[31];
      // Z = NZCV[2]
-     NZCV[2] = (F == 0) ? 1 : 0;
+     NZCV[2] <= (F == 0) ? 1 : 0;
      end
      
-//barrelShifter shifter(
-//    .clk(clk),
-//    .Shift_Carry_Out(Shift_Carry_Out),
-//    .Shift_Out(B)
-//);
 endmodule

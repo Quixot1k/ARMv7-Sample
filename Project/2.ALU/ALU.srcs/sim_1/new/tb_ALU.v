@@ -34,9 +34,7 @@
     // // C32 FLAG
     // reg C32;
 
-
 module tb_ALU();
-
     // INPUT
     reg clk = 0;
     reg [31:0] A;
@@ -55,8 +53,8 @@ module tb_ALU();
     always #1 clk = ~clk;
     initial begin
         // 1
-        A = 32'hFFFF0000;
-        B = 32'hAAAAFFFF;
+        A = 32'hac963a55;
+        B = 32'h365aacf9;
         CF = 1'b1;
         VF = 1'b0;
         ALU_OP = 4'b0000;
@@ -64,8 +62,8 @@ module tb_ALU();
         #50;
         
         //2
-        A = 32'hFFFF0000;
-        B = 32'hAAAAFFFF;
+        A = 32'hac963a55;
+        B = 32'h365aacf9;
         CF = 1'b1;
         VF = 1'b0;
         ALU_OP = 4'b0001;
@@ -73,8 +71,8 @@ module tb_ALU();
         #50;
 
         //3
-        A = 32'hFFFF0000;
-        B = 32'hAAAAFFFF;
+        A = 32'hac963a55;
+        B = 32'h365aacf9;
         CF = 1'b1;
         VF = 1'b0;
         ALU_OP = 4'b0010;
@@ -82,8 +80,8 @@ module tb_ALU();
         #50;
 
         //4
-        A = 32'hFFFF0000;
-        B = 32'hAAAAFFFF;
+        A = 32'hac963a55;
+        B = 32'h365aacf9;
         CF = 1'b1;
         VF = 1'b0;
         ALU_OP = 4'b0011;
@@ -91,8 +89,8 @@ module tb_ALU();
         #50;
 
         //5
-        A = 32'hFFFF0000;
-        B = 32'hAAAAFFFF;
+        A = 32'hac963a55;
+        B = 32'h365aacf9;
         CF = 1'b1;
         VF = 1'b0;
         ALU_OP = 4'b0100;
@@ -100,8 +98,8 @@ module tb_ALU();
         #50;
 
         //6
-        A = 32'hFFFF0000;
-        B = 32'hAAAAFFFF;
+        A = 32'hac963a55;
+        B = 32'h365aacf9;
         CF = 1'b1;
         VF = 1'b0;
         ALU_OP = 4'b0101;
@@ -109,8 +107,8 @@ module tb_ALU();
         #50;
 
         //7
-        A = 32'hFFFF0000;
-        B = 32'hAAAAFFFF;
+        A = 32'hac963a55;
+        B = 32'h365aacf9;
         CF = 1'b1;
         VF = 1'b0;
         ALU_OP = 4'b0110;
@@ -118,8 +116,8 @@ module tb_ALU();
         #50;
 
         //8
-        A = 32'hFFFF0000;
-        B = 32'hAAAAFFFF;
+        A = 32'hac963a55;
+        B = 32'h365aacf9;
         CF = 1'b1;
         VF = 1'b0;
         ALU_OP = 4'b0111;
@@ -127,8 +125,8 @@ module tb_ALU();
         #50;
 
         //9
-        A = 32'hFFFF0000;
-        B = 32'hAAAAFFFF;
+        A = 32'hac963a55;
+        B = 32'h365aacf9;
         CF = 1'b1;
         VF = 1'b0;
         ALU_OP = 4'b1000;
@@ -136,8 +134,8 @@ module tb_ALU();
         #50;
 
         //10
-        A = 32'hFFFF0000;
-        B = 32'hAAAAFFFF;
+        A = 32'hac963a55;
+        B = 32'h365aacf9;
         CF = 1'b1;
         VF = 1'b0;
         ALU_OP = 4'b1010;
@@ -145,8 +143,8 @@ module tb_ALU();
         #50;
 
         //11
-        A = 32'hFFFF0000;
-        B = 32'hAAAAFFFF;
+        A = 32'hac963a55;
+        B = 32'h365aacf9;
         CF = 1'b1;
         VF = 1'b0;
         ALU_OP = 4'b1100;
@@ -154,8 +152,8 @@ module tb_ALU();
         #50;
 
         //12
-        A = 32'hFFFF0000;
-        B = 32'hAAAAFFFF;
+        A = 32'hac963a55;
+        B = 32'h365aacf9;
         CF = 1'b1;
         VF = 1'b0;
         ALU_OP = 4'b1101;
@@ -163,8 +161,8 @@ module tb_ALU();
         #50;
 
         //13
-        A = 32'hFFFF0000;
-        B = 32'hAAAAFFFF;
+        A = 32'hac963a55;
+        B = 32'h365aacf9;
         CF = 1'b1;
         VF = 1'b0;
         ALU_OP = 4'b1110;
@@ -172,8 +170,8 @@ module tb_ALU();
         #50;
 
         //14
-        A = 32'hFFFF0000;
-        B = 32'hAAAAFFFF;
+        A = 32'hac963a55;
+        B = 32'h365aacf9;
         CF = 1'b1;
         VF = 1'b0;
         ALU_OP = 4'b1111;

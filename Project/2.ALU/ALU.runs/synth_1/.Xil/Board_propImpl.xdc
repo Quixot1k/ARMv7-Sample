@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/GAO/Desktop/Computer-Orgnization/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc rfile:../../../ALU.srcs/constrs_1/new/Board.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc rfile:../../../ALU.srcs/constrs_1/new/Board.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN T3  [get_ports {sw[1]}]
 set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]
