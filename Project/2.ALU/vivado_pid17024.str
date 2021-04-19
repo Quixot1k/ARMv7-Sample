@@ -104,3 +104,11 @@ Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // Tcl Message: open_project C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.xpr 
 // Tcl Message: Scanning sources... Finished scanning sources 
 // Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,043 MB. GUI used memory: 58 MB. Current time: 4/19/21, 9:48:01 PM CST
+// Tcl Message: open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 1079.926 ; gain = 0.000 
+// Project name: ALU; location: C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU; part: xc7a100tfgg484-2L
+dismissDialog("Open Project"); // bz
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// Tcl Message: update_compile_order -fileset sources_1 

@@ -11,3 +11,4 @@
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.xpr
+update_compile_order -fileset sources_1
