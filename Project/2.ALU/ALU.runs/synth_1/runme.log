@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log Board.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Board.tcl
+    with args -log ALU_barrelShifter.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ALU_barrelShifter.tcl
 
 
 
@@ -9,99 +9,363 @@
   **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
     ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 
-source Board.tcl -notrace
-Command: synth_design -top Board -part xc7a100tfgg484-2L
+source ALU_barrelShifter.tcl -notrace
+Command: synth_design -top ALU_barrelShifter -part xc7a100tfgg484-2L
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tfgg484-2L
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 7028
+INFO: [Synth 8-7075] Helper process launched with PID 14760
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1116.613 ; gain = 27.797
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1115.152 ; gain = 6.379
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'Board' [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/Board.v:3]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/Board.v:32]
-INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/ALU.v:3]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/ALU.v:26]
-INFO: [Synth 8-6155] done synthesizing module 'ALU' (1#1) [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/ALU.v:3]
-WARNING: [Synth 8-689] width (32) of port connection 'Shift_Carry_Out' does not match port width (1) of module 'ALU' [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/Board.v:40]
-WARNING: [Synth 8-689] width (4) of port connection 'F' does not match port width (32) of module 'ALU' [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/Board.v:40]
-WARNING: [Synth 8-689] width (32) of port connection 'NZCV' does not match port width (4) of module 'ALU' [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/Board.v:40]
-INFO: [Synth 8-6157] synthesizing module 'Display' [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/Display.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'Display' (2#1) [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/Display.v:3]
-WARNING: [Synth 8-7071] port 'count' of module 'Display' is unconnected for instance 'Display_Instance' [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/Board.v:46]
-WARNING: [Synth 8-7071] port 'digit' of module 'Display' is unconnected for instance 'Display_Instance' [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/Board.v:46]
-WARNING: [Synth 8-7023] instance 'Display_Instance' of module 'Display' has 6 connections declared, but only 4 given [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/Board.v:46]
-INFO: [Synth 8-6155] done synthesizing module 'Board' (3#1) [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/Board.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ALU_barrelShifter' [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/ALU_barrelShifter.v:23]
+INFO: [Synth 8-6157] synthesizing module 'barrelShifter' [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/barrelShifter.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'barrelShifter' (1#1) [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/barrelShifter.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'Shift_Num' does not match port width (8) of module 'barrelShifter' [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/ALU_barrelShifter.v:42]
+WARNING: [Synth 8-689] width (4) of port connection 'SHFT_OP' does not match port width (3) of module 'barrelShifter' [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/ALU_barrelShifter.v:43]
+WARNING: [Synth 8-689] width (1) of port connection 'Shift_Out' does not match port width (32) of module 'barrelShifter' [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/ALU_barrelShifter.v:46]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/ALU.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/ALU.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (2#1) [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/ALU.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_barrelShifter' (3#1) [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/ALU_barrelShifter.v:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1168.441 ; gain = 79.625
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1168.520 ; gain = 59.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1168.441 ; gain = 79.625
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1168.520 ; gain = 59.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1168.441 ; gain = 79.625
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1168.520 ; gain = 59.746
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1168.441 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1168.520 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc]
-WARNING: [Vivado 12-507] No nets matched 'clk_IBUF'. [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:103]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:103]
+Parsing XDC File [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc]
+WARNING: [Vivado 12-584] No ports matched 'sw'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:3]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[1]'. [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:104]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:104]
+WARNING: [Vivado 12-584] No ports matched 'sw'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:4]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:4]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[2]'. [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:105]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:105]
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:5]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:5]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[3]'. [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:106]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:106]
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:6]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:6]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[4]'. [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:107]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:107]
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:7]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[5]'. [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:108]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:108]
+WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:8]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[6]'. [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:109]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:109]
+WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:9]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Board_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/Board_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:10]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:11]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:11]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[16]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[17]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[18]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[19]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[20]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[21]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[22]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[23]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[24]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[25]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[26]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[27]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:31]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[28]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[29]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[30]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[31]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[32]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'swb'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'swb[1]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'swb[2]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'swb[3]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'swb[4]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'swb[5]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'swb[6]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:49]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[4]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[5]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[6]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[7]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[8]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[9]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[10]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[11]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[12]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[13]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[14]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[15]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[16]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[17]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[18]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[19]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[20]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[21]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[22]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[23]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[24]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[25]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[26]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[27]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[28]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[29]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[30]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[31]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:79]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:79]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[32]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:80]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:80]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[7]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:89]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:90]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'which'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'which[0]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'which[1]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'which[2]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:95]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:95]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'enable'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:96]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:96]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:97]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:97]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'clk_IBUF'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:103]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:103]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[1]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:104]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:104]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[2]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:105]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:105]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[3]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:106]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:106]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[4]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:107]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:107]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[5]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:108]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:108]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'swb_IBUF[6]'. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/constrs_1/new/Board.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1255.039 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1257.453 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1255.039 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1257.453 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1255.039 ; gain = 166.223
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1257.453 ; gain = 148.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-2L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1255.039 ; gain = 166.223
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1257.453 ; gain = 148.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1255.039 ; gain = 166.223
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1257.453 ; gain = 148.680
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'F_reg' [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/ALU.v:27]
+WARNING: [Synth 8-327] inferring latch for variable 'NZCV_reg' [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/ALU.v:29]
+WARNING: [Synth 8-327] inferring latch for variable 'C32_reg' [C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.srcs/sources_1/new/ALU.v:39]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1255.039 ; gain = 166.223
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1257.453 ; gain = 148.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -112,25 +376,18 @@ Detailed RTL Component Info :
 	   2 Input   33 Bit       Adders := 2     
 	   4 Input   33 Bit       Adders := 1     
 	   4 Input   32 Bit       Adders := 1     
-	   2 Input   11 Bit       Adders := 1     
-	   2 Input    3 Bit       Adders := 2     
 +---XORs : 
 	   2 Input     32 Bit         XORs := 1     
 	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	               32 Bit    Registers := 4     
-	               11 Bit    Registers := 1     
-	                4 Bit    Registers := 2     
-	                3 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 4     
 +---Muxes : 
-	  15 Input   32 Bit        Muxes := 3     
+	   2 Input   32 Bit        Muxes := 9     
 	   4 Input   32 Bit        Muxes := 1     
-	  15 Input    2 Bit        Muxes := 2     
+	  15 Input   32 Bit        Muxes := 3     
 	   4 Input    2 Bit        Muxes := 1     
-	  15 Input    1 Bit        Muxes := 2     
+	  15 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 4     
 	   4 Input    1 Bit        Muxes := 1     
+	  15 Input    1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -147,25 +404,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1255.039 ; gain = 166.223
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1257.453 ; gain = 148.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1261.672 ; gain = 172.855
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1262.746 ; gain = 153.973
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1261.820 ; gain = 173.004
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1263.043 ; gain = 154.270
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1290.465 ; gain = 201.648
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1282.168 ; gain = 173.395
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -183,37 +440,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1290.465 ; gain = 201.648
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1291.098 ; gain = 182.324
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1290.465 ; gain = 201.648
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1291.098 ; gain = 182.324
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1290.465 ; gain = 201.648
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1291.098 ; gain = 182.324
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1290.465 ; gain = 201.648
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1291.098 ; gain = 182.324
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1290.465 ; gain = 201.648
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1291.098 ; gain = 182.324
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1290.465 ; gain = 201.648
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1291.098 ; gain = 182.324
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -226,43 +483,47 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+------+------+
-|      |Cell  |Count |
-+------+------+------+
-|1     |BUFG  |     5|
-|2     |LUT1  |     2|
-|3     |LUT2  |     6|
-|4     |LUT3  |     8|
-|5     |LUT4  |    38|
-|6     |LUT5  |     7|
-|7     |LUT6  |    25|
-|8     |MUXF7 |     4|
-|9     |FDRE  |   154|
-|10    |IBUF  |    37|
-|11    |OBUF  |    19|
-|12    |OBUFT |    25|
-+------+------+------+
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    53|
+|3     |LUT1   |   122|
+|4     |LUT2   |    11|
+|5     |LUT3   |    32|
+|6     |LUT4   |    16|
+|7     |LUT5   |   105|
+|8     |LUT6   |    88|
+|9     |MUXF7  |    12|
+|10    |MUXF8  |     2|
+|11    |LD     |    35|
+|12    |LDCP   |     1|
+|13    |IBUF   |    81|
+|14    |OBUF   |    36|
++------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1290.465 ; gain = 201.648
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1291.098 ; gain = 182.324
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:41 . Memory (MB): peak = 1290.465 ; gain = 115.051
-Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 1290.465 ; gain = 201.648
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1291.098 ; gain = 93.391
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1291.098 ; gain = 182.324
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1300.172 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1303.156 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 103 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1307.176 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1303.156 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 36 instances were transformed.
+  LD => LDCE: 35 instances
+  LDCP => LDCP (GND, LDCE, LUT3(x2), VCC): 1 instance 
 
 INFO: [Common 17-83] Releasing license: Synthesis
-23 Infos, 13 Warnings, 7 Critical Warnings and 0 Errors encountered.
+21 Infos, 102 Warnings, 96 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 1307.176 ; gain = 218.359
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1303.156 ; gain = 194.383
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-INFO: [Common 17-1381] The checkpoint 'C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.runs/synth_1/Board.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file Board_utilization_synth.rpt -pb Board_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Apr 19 12:27:07 2021...
+INFO: [Common 17-1381] The checkpoint 'C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.runs/synth_1/ALU_barrelShifter.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ALU_barrelShifter_utilization_synth.rpt -pb ALU_barrelShifter_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 19 22:16:50 2021...

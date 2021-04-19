@@ -45,7 +45,6 @@ module Board(sw, swb, led, clk, which, seg, enable);
         
     
     barrelShifter barrelShifter(
-    .clk(clk),
     .SHFT_OP(SHFT_OP),
     .Shift_Data(Shift_Data),
     .Shift_Num(Shift_Num),

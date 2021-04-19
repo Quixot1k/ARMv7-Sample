@@ -21,7 +21,6 @@
 
 
 module ALU_barrelShifter(
-    input clk,
     // input from shifter
     input [31:0] Shift_Data,
     input [31:0] Shift_Num,
@@ -39,7 +38,6 @@ module ALU_barrelShifter(
 
 barrelShifter shifter(
     // input
-    .clk            (clk), 
     .Shift_Data     (Shift_Data), 
     .Shift_Num      (Shift_Num), 
     .SHFT_OP        (SHFT_OP), 
@@ -51,7 +49,6 @@ barrelShifter shifter(
 
 ALU alu(
     // input
-    .clk            (clk), 
     .A              (A), 
     .B              (Shift_Out), 
     .Shift_Carry_Out(Shift_Carry_Out), 

@@ -118,8 +118,7 @@ module tb_barrelShifter();
         #100 Shift_Num = 8'h10;
     end
     
-barrelShifter barrelshifter(
-    .clk(clk), 
+barrelShifter barrelshifter( 
     .SHFT_OP(SHFT_OP), 
     .Shift_Data(Shift_Data), 
     .Shift_Num(Shift_Num),

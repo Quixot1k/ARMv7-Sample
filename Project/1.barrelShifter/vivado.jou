@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Apr 19 22:08:05 2021
+# Process ID: 4692
+# Current directory: C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/1.barrelShifter
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16876 C:\Users\GAO\Desktop\Computer-Orgnization-ARM-\Project\1.barrelShifter\barrelShifter.xpr
+# Log file: C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/1.barrelShifter/vivado.log
+# Journal file: C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/1.barrelShifter\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/1.barrelShifter/barrelShifter.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+source tb_barrelShifter.tcl
+close_sim

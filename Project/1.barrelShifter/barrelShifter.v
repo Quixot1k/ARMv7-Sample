@@ -19,22 +19,20 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module barrelShifter(clk, Shift_Data, Shift_Num, SHFT_OP, Carry_flag, Shift_Out, Shift_Carry_Out);
+module barrelShifter(Shift_Data, Shift_Num, SHFT_OP, Carry_flag, Shift_Out, Shift_Carry_Out);
     
     // INPUT
-    input clk;
     input [31:0] Shift_Data; // Shift Data
     input [7:0] Shift_Num; // Shift bits
     // SHFT_OP[2:1] shift function 
     // SHFT_OP[0] decide shift bits with Shift_Num
     input [2:0] SHFT_OP; //Shift OP
     input Carry_flag;
-    
     // OUTPUT
     output reg [31:0] Shift_Out;
     output reg Shift_Carry_Out;
     
-    always@(posedge clk) begin
+    always@(*) begin
     case(SHFT_OP[2:1])
         2'b00: begin
             if (Shift_Num == 0) begin

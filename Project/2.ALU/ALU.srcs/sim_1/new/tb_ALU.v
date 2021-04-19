@@ -180,7 +180,6 @@ module tb_ALU();
     end
 
     ALU alu(
-        .clk(clk),
         .A(A),
         .B(B),
         .ALU_OP(ALU_OP),

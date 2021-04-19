@@ -1,9 +1,8 @@
 `timescale 1ns / 1ps
 
-module ALU(clk, A, B, Shift_Carry_Out, ALU_OP, CF, VF, F, NZCV);
+module ALU(A, B, Shift_Carry_Out, ALU_OP, CF, VF, F, NZCV);
 
     // INPUT
-    input clk;
     input [31:0] A;
     input [3:0] ALU_OP;
     input CF; // from CSPR
@@ -22,7 +21,7 @@ module ALU(clk, A, B, Shift_Carry_Out, ALU_OP, CF, VF, F, NZCV);
     // SUB: C32 = 1 -> C = 0
     // ALU_VF: C32 ^ C31
     
-    always@(posedge clk) begin
+    always@(*) begin
     case(ALU_OP)
          4'b0000:begin
             F <= A & B;
