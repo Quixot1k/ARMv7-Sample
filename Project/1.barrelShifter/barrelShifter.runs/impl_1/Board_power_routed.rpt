@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date             : Sun Apr 18 23:41:57 2021
-| Host             : DESKTOP-0M5LT11 running 64-bit major release  (build 9200)
+| Date             : Sun Apr 18 18:50:12 2021
+| Host             : DESKTOP-3F4TKM1 running 64-bit major release  (build 9200)
 | Command          : report_power -file Board_power_routed.rpt -pb Board_power_summary_routed.pb -rpx Board_power_routed.rpx
 | Design           : Board
 | Device           : xc7a100tfgg484-2L
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 9.024        |
+| Total On-Chip Power (W)  | 0.728        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 8.904        |
-| Device Static (W)        | 0.120        |
+| Dynamic (W)              | 0.636        |
+| Device Static (W)        | 0.092        |
 | Effective TJA (C/W)      | 2.7          |
-| Max Ambient (C)          | 75.9         |
-| Junction Temperature (C) | 49.1         |
+| Max Ambient (C)          | 98.1         |
+| Junction Temperature (C) | 26.9         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     2.478 |      640 |       --- |             --- |
-|   LUT as Logic |     2.428 |      462 |     63400 |            0.73 |
-|   Register     |     0.031 |       90 |    126800 |            0.07 |
+| Slice Logic    |     0.211 |      150 |       --- |             --- |
+|   LUT as Logic |     0.185 |       65 |     63400 |            0.10 |
 |   BUFG         |     0.017 |        3 |        32 |            9.38 |
-|   F7/F8 Muxes  |     0.002 |        4 |     63400 |           <0.01 |
+|   Register     |     0.008 |       59 |    126800 |            0.05 |
+|   F7/F8 Muxes  |    <0.001 |        4 |     63400 |           <0.01 |
 |   Others       |     0.000 |        6 |       --- |             --- |
-| Signals        |     2.536 |      615 |       --- |             --- |
-| I/O            |     3.890 |       80 |       285 |           28.07 |
-| Static Power   |     0.120 |          |           |                 |
-| Total          |     9.024 |          |           |                 |
+| Signals        |     0.212 |      105 |       --- |             --- |
+| I/O            |     0.213 |       60 |       285 |           21.05 |
+| Static Power   |     0.092 |          |           |                 |
+| Total          |     0.728 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,16 +71,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     5.197 |       5.158 |      0.038 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.327 |       0.307 |      0.021 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.503 |       0.487 |      0.016 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.030 |       0.012 |      0.018 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vcco18    |       1.800 |     1.778 |       1.774 |      0.004 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |     0.075 |       0.071 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
@@ -135,12 +135,12 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+--------------------+-----------+
-| Name               | Power (W) |
-+--------------------+-----------+
-| Board              |     8.904 |
-|   Display_Instance |     0.096 |
-|   Shift_Instance   |     3.816 |
-+--------------------+-----------+
++-----------------+-----------+
+| Name            | Power (W) |
++-----------------+-----------+
+| Board           |     0.636 |
+|   Display       |     0.111 |
+|   barrelShifter |     0.130 |
++-----------------+-----------+
 
 

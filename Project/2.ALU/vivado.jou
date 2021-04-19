@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Apr 19 21:47:46 2021
+# Process ID: 17024
+# Current directory: C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3168 C:\Users\GAO\Desktop\Computer-Orgnization-ARM-\Project\2.ALU\ALU.xpr
+# Log file: C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/vivado.log
+# Journal file: C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/2.ALU/ALU.xpr
