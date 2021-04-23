@@ -1,0 +1,1 @@
+-wto "ddaa0f52074c42fdbda8dbb3cf6058a6" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "uvm" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "tb_ALU_barrelShifter_behav" "xil_defaultlib.tb_ALU_barrelShifter" "xil_defaultlib.glbl" -log "elaborate.log" 
