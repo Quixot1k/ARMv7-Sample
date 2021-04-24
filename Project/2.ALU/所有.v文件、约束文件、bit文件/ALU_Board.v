@@ -40,16 +40,13 @@ module ALU_Board(sw, swb, led, clk, which, seg, enable);
     always @(posedge swb[1]) A = sw; 
     always @(posedge swb[2]) B = sw;
     always @(posedge swb[3]) {ALU_OP,CF,VF,Shift_Carry_Out} = sw[1:7];
-    always @(posedge swb[4])
-    begin
-        begin
-            case(cnt)
-            0:begin data <= A; end //first time hit swb[1]: input A
-            1:begin data <= B; end //second time hit swb[1]: input B
-            2:begin data <= F; end //third time hit swb[1]: input [32:29]ALU_OP; [28, 27, 26] CF,VF,Shift_Carry_Out
-            endcase
-            cnt <= (cnt+1) % 3;
-        end
+    always @(posedge swb[4]) begin
+    case(cnt)
+        0:begin data <= A; end //first time hit swb[1]: input A
+        1:begin data <= B; end //second time hit swb[1]: input B
+        2:begin data <= F; end //third time hit swb[1]: input [32:29]ALU_OP; [28, 27, 26] CF,VF,Shift_Carry_Out
+        endcase
+        cnt <= (cnt+1) % 3;
     end
     ALU ALU_Instance(ALU_OP,A,B,Shift_Carry_Out,CF,VF,NZCV,F);
     

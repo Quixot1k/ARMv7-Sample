@@ -18,9 +18,9 @@ module regFile(
     input Write_Reg,
   
 //  OUTPUT
-    output  [31:0] R_Data_A,
-    output  [31:0] R_Data_B,
-    output  [31:0] R_Data_C
+    output [31:0] R_Data_A,
+    output [31:0] R_Data_B,
+    output [31:0] R_Data_C
     );
 
     // RegFiles
