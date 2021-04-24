@@ -1,14 +1,14 @@
-
-*** Running vivado
-    with args -log Board.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Board.tcl
-
-
-
-****** Vivado v2020.2 (64-bit)
-  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
-  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
-
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Apr 24 23:55:05 2021
+# Process ID: 9360
+# Current directory: C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.runs/synth_1
+# Command line: vivado.exe -log Board.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Board.tcl
+# Log file: C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.runs/synth_1/Board.vds
+# Journal file: C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
 source Board.tcl -notrace
 Command: synth_design -top Board -part xc7a100tfgg484-2L
 Starting synth_design
