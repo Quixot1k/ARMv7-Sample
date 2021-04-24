@@ -2,10 +2,10 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Sat Apr 24 14:59:51 2021
-# Process ID: 2708
+# Start of session at: Sat Apr 24 23:00:58 2021
+# Process ID: 10244
 # Current directory: C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10828 C:\Users\GAO\Desktop\Computer-Orgnization-ARM-\Project\3.regFile\regFile.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7336 C:\Users\GAO\Desktop\Computer-Orgnization-ARM-\Project\3.regFile\regFile.xpr
 # Log file: C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/vivado.log
 # Journal file: C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile\vivado.jou
 #-----------------------------------------------------------
@@ -17,17 +17,4 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.2/data/ip'.
-open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 1088.738 ; gain = 0.000
-update_compile_order -fileset sources_1
-file mkdir C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/constrs_1
-file mkdir C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/constrs_1/new
-close [ open C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/constrs_1/new/Board.xdc w ]
-add_files -fileset constrs_1 C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/constrs_1/new/Board.xdc
-close [ open C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sources_1/new/Board.v w ]
-add_files C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sources_1/new/Board.v
-update_compile_order -fileset sources_1
-close [ open C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sources_1/new/Display.v w ]
-add_files C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sources_1/new/Display.v
-update_compile_order -fileset sources_1
-exit
-INFO: [Common 17-206] Exiting Vivado at Sat Apr 24 18:48:44 2021...
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 1070.957 ; gain = 0.000

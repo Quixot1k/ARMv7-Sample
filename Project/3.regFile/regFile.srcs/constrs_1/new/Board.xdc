@@ -1,5 +1,7 @@
+# 开启比特流压缩，优化 .bit 文件大小
 set_property BITSTREAM.GENERAL.COMPRESS TRUE [current_design]
 
+# Switch，开关
 set_property PULLDOWN true [get_ports sw]
 set_property IOSTANDARD LVCMOS18 [get_ports sw]
 set_property PACKAGE_PIN T3  [get_ports {sw[1]}]
@@ -35,7 +37,7 @@ set_property PACKAGE_PIN U7  [get_ports {sw[30]}]
 set_property PACKAGE_PIN AB7 [get_ports {sw[31]}]
 set_property PACKAGE_PIN AB8 [get_ports {sw[32]}]
 
-# Switch Button
+# Switch Button，按钮
 set_property IOSTANDARD LVCMOS18 [get_ports swb]
 set_property PACKAGE_PIN R4  [get_ports {swb[1]}]
 set_property PACKAGE_PIN AA4 [get_ports {swb[2]}]
@@ -45,6 +47,7 @@ set_property PACKAGE_PIN V8  [get_ports {swb[5]}]
 set_property PACKAGE_PIN AA8 [get_ports {swb[6]}]
 
 # LED
+set_property PULLDOWN true [get_ports led]
 set_property IOSTANDARD LVCMOS18 [get_ports led]
 set_property PACKAGE_PIN R1 [get_ports {led[1]}]
 set_property PACKAGE_PIN P2 [get_ports {led[2]}]
@@ -79,7 +82,7 @@ set_property PACKAGE_PIN N4 [get_ports {led[30]}]
 set_property PACKAGE_PIN L4 [get_ports {led[31]}]
 set_property PACKAGE_PIN J4 [get_ports {led[32]}]
 
-
+# 数码管相关
 set_property IOSTANDARD LVCMOS18 [get_ports seg]
 set_property PACKAGE_PIN H19 [get_ports {seg[7]}]
 set_property PACKAGE_PIN G20 [get_ports {seg[6]}]
