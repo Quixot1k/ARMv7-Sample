@@ -20,11 +20,12 @@ module regFile(
 //  OUTPUT
     output reg [31:0] R_Data_A,
     output reg [31:0] R_Data_B,
-    output reg [31:0] R_Data_C
+    output reg [31:0] R_Data_C,
+    output reg [31:0] R_Data_PC
     );
 
     // RegFiles
-    // [0:12] used by all state 
+    // [0:14] used by all state 
     reg [31:0] R_gen [0:14]; 
     // [8:14] used by fiq state
     reg [31:0] R_fiq [8:14];
@@ -134,10 +135,12 @@ module regFile(
             R14_irq<=0; R14_abt<=0; R14_svc<=0; R14_und<=0; R14_mon<=0;
             R15<=0; 
         end
-        // WRITE END
-        // #############################################
-
-        // READ: M[4:0] + R_Addr_X
+    end
+    // WRITE END
+    // #############################################
+    
+    // READ: M[4:0] + R_Addr_X
+    always @(*) begin
         case(M[4:0]) // state
             5'b10000: begin //usr
                 // R0 ~ R14
@@ -380,11 +383,10 @@ module regFile(
             end
         endcase
         // Read PC
-        if(R_Addr_A == 15) R_Data_A <= R15;
-        if(R_Addr_B == 15) R_Data_B <= R15;
-        if(R_Addr_C == 15) R_Data_C <= R15;
+        if(R_Addr_A == 15) R_Data_PC <= R15;
+        if(R_Addr_B == 15) R_Data_PC <= R15;
+        if(R_Addr_C == 15) R_Data_PC <= R15;
         // READ END
         // #############################################
     end  
-
 endmodule
