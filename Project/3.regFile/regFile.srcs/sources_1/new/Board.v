@@ -61,15 +61,6 @@ module Board(sw, swb, led, clk, which, seg, enable);
         end
     end
 
-//  RST
-    always @(swb[3]) begin
-        
-    end
-//  CLK
-    always @(swb[4]) begin
-        
-    end
-
 // output operation
     always @(sw[6]) begin
         case (cnt6)
@@ -85,10 +76,10 @@ module Board(sw, swb, led, clk, which, seg, enable);
     assign led[30:32] = cnt1;
     assign led[1:4] = cnt6;
     
-    regFile rf(
+    regFile regFile_Instance(
 //  INPUT
-    .clk(clk),
-    .Rst(Rst),
+    .clk(swb[4]), // clk
+    .Rst(swb[3]), // Rst
     .M(M), // from CPSR
 //  Read Addr
     .R_Addr_A(R_Addr_A),
