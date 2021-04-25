@@ -47,7 +47,7 @@ module regFile(
  
     always @(posedge ~clk) begin
         // WRITE: clk + Write_Reg + M[4:0] + W_Addr
-        if (Write_Reg) begin // allowed to wirte
+        if (M[4] && Write_Reg) begin // allowed to wirte
             case(M[4:0]) // state
                 5'b10000: begin //usr
                     // R0 ~ R14
@@ -124,7 +124,7 @@ module regFile(
             endcase
         end
         // write R15(PC)
-        if(Write_PC) begin
+        if(M[4] && Write_PC) begin
             R15 <= PC_New;
         end
         // Clear
