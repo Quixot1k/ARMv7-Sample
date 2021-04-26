@@ -2,7 +2,7 @@
 
 module Board(sw, swb, led, clk, which, seg, enable);
     
-    input clk = 0; 
+    input clk; 
     input [1:32] sw; // switch
     input [1:6] swb; // button
     output [2:0] which;
@@ -28,14 +28,15 @@ module Board(sw, swb, led, clk, which, seg, enable);
     wire [31:0] R_Data_A;
     wire [31:0] R_Data_B;
     wire [31:0] R_Data_C;
-
+    wire [31:0] R_Data_PC;
+    
 //  store outputs
     reg [32:1] data;
 
     // loop for swb[1]
-    reg [2:1]cnt1 = 0;
+    reg [2:1] cnt1 = 0;
     // loop for swb[6]
-    reg [2:1]cnt6 = 0;
+    reg [3:1] cnt6 = 0;
 
 //  input operation
     always @(swb[1]) begin // hit swb[1]
@@ -67,14 +68,15 @@ module Board(sw, swb, led, clk, which, seg, enable);
             0: begin data <= R_Data_A; end
             1: begin data <= R_Data_B; end
             2: begin data <= R_Data_C; end
-            3: begin data <= 32'hffffffff; end
+            3: begin data <= R_Data_PC; end
+            4: begin data <= 32'h88888888; end
         endcase  
-        cnt6 <= (cnt6+1) % 4; 
+        cnt6 <= (cnt6+1) % 5; 
     end
 
 // see cnt1 and cnt6
-    assign led[30:32] = cnt1;
-    assign led[1:4] = cnt6;
+    assign led[31:32] = cnt1;
+    assign led[1:3] = cnt6;
     
     regFile regFile_Instance(
 //  INPUT
@@ -95,7 +97,8 @@ module Board(sw, swb, led, clk, which, seg, enable);
 //  OUTPUT
     .R_Data_A(R_Data_A),
     .R_Data_B(R_Data_B),
-    .R_Data_C(R_Data_C)
+    .R_Data_C(R_Data_C),
+    .R_Data_PC(R_Data_PC)
     );
 
     Display Display_Instance(
