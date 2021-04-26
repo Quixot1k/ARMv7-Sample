@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Mon Apr 26 21:40:37 2021
+| Date         : Mon Apr 26 21:55:50 2021
 | Host         : DESKTOP-3F4TKM1 running 64-bit major release  (build 9200)
 | Command      : report_drc -file regFile_drc_opted.rpt -pb regFile_drc_opted.pb -rpx regFile_drc_opted.rpx
 | Design       : regFile
