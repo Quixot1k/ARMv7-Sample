@@ -11,3 +11,119 @@
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.xpr
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_regFile_implementation [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+source tb_regFile_implementation.tcl
+close_sim
+launch_simulation
+source tb_regFile_implementation.tcl
+close_sim
+launch_simulation
+source tb_regFile_implementation.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_regFile [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+close_sim
+launch_simulation
+source tb_regFile.tcl
+close_sim
+launch_simulation
+source tb_regFile.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_regFile_implementation [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+close_sim
+launch_simulation
+source tb_regFile_implementation.tcl
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+close [ open C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sources_1/new/regFile_2.v w ]
+add_files C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sources_1/new/regFile_2.v
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top regFile_2 [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+close_design
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+refresh_design
+close_sim
+launch_simulation
+launch_simulation
+source tb_regFile_implementation.tcl
+close_sim
+launch_simulation
+source tb_regFile_implementation.tcl
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+close_sim
+launch_simulation
+source tb_regFile_implementation.tcl
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+refresh_design
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top regFile [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+refresh_design
