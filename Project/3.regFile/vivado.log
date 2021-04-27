@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Apr 27 09:36:34 2021
+# Process ID: 7728
+# Current directory: C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7520 C:\Users\GAO\Desktop\Computer-Orgnization-ARM-\Project\3.regFile\regFile.xpr
+# Log file: C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/vivado.log
+# Journal file: C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 1079.555 ; gain = 0.000

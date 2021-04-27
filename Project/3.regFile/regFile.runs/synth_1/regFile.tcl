@@ -90,6 +90,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sources_1/new/Display.v
   C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sources_1/new/Board.v
   C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sources_1/new/regfile_Usr_Sys_State.v
+  C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sources_1/new/regFile_2.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

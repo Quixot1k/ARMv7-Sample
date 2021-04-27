@@ -4,6 +4,7 @@ verilog xil_defaultlib  \
 "../../../../regFile.srcs/sources_1/new/Display.v" \
 "../../../../regFile.srcs/sources_1/new/Board.v" \
 "../../../../regFile.srcs/sources_1/new/regfile_Usr_Sys_State.v" \
+"../../../../regFile.srcs/sources_1/new/regFile_2.v" \
 "../../../../regFile.srcs/sim_1/new/tb_regFile_implementation.v" \
 "../../../../regFile.srcs/sim_1/new/tb_regfile_User_Sys_State.v" \
 "../../../../regFile.srcs/sim_1/new/tb_regFile.v" \
