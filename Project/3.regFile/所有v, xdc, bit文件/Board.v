@@ -11,7 +11,7 @@ module Board(sw, swb, led, clk, which, seg, enable);
     reg Write_Reg,Write_PC;
     reg [32:1] W_Data,PC_New;
     reg [8:1] Shift_Num;
-    reg [32:0] data;
+    reg [31:0] data;
     
     reg [2:1]cnt = 0;  
     reg [3:1]cnt2 = 0;
