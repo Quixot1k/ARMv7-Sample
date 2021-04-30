@@ -1,0 +1,124 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Thu Apr 29 21:43:17 2021
+| Host         : DESKTOP-3F4TKM1 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Board_control_sets_placed.rpt
+| Design       : Board
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    46 |
+|    Minimum number of control sets                        |    46 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    66 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    46 |
+| >= 0 to < 4        |     3 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    42 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              19 |            7 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              32 |           13 |
+| Yes          | No                    | No                     |             213 |          105 |
+| Yes          | No                    | Yes                    |            1054 |          512 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------+----------------------------------------+------------------+------------------+----------------+--------------+
+|    Clock Signal   |              Enable Signal             | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------+----------------------------------------+------------------+------------------+----------------+--------------+
+|  swb_IBUF_BUFG[1] |                                        |                  |                1 |              2 |         2.00 |
+| ~clk_IBUF_BUFG    |                                        |                  |                1 |              3 |         3.00 |
+|  swb_IBUF_BUFG[6] |                                        |                  |                2 |              3 |         1.50 |
+|  clk_IBUF_BUFG    |                                        |                  |                3 |             11 |         3.67 |
+|  swb_IBUF_BUFG[1] | R_Addr_C                               |                  |                4 |             27 |         6.75 |
+|  swb_IBUF_BUFG[1] | W_Data                                 |                  |                5 |             31 |         6.20 |
+|  swb_IBUF_BUFG[3] | regFile_Instance/R_Data_A[30]_i_1_n_0  |                  |               26 |             31 |         1.19 |
+|  swb_IBUF_BUFG[3] | regFile_Instance/R_Data_B[30]_i_1_n_0  |                  |               27 |             31 |         1.15 |
+|  swb_IBUF_BUFG[3] | regFile_Instance/R_Data_C[30]_i_1_n_0  |                  |               30 |             31 |         1.03 |
+|  swb_IBUF_BUFG[3] | regFile_Instance/R_Data_PC[30]_i_1_n_0 |                  |                7 |             31 |         4.43 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R_fiq[10][30]_i_1_n_0 | swb_IBUF[4]      |               18 |             31 |         1.72 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R_fiq[13][30]_i_1_n_0 | swb_IBUF[4]      |               15 |             31 |         2.07 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R_gen[14][30]_i_1_n_0 | swb_IBUF[4]      |               20 |             31 |         1.55 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R_gen[1][30]_i_1_n_0  | swb_IBUF[4]      |                8 |             31 |         3.88 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R_gen[2][30]_i_1_n_0  | swb_IBUF[4]      |                6 |             31 |         5.17 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R_gen[3][30]_i_1_n_0  | swb_IBUF[4]      |               11 |             31 |         2.82 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R_gen[0][30]_i_1_n_0  | swb_IBUF[4]      |                7 |             31 |         4.43 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R_gen[11][30]_i_1_n_0 | swb_IBUF[4]      |               28 |             31 |         1.11 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R_gen[9][30]_i_1_n_0  | swb_IBUF[4]      |                8 |             31 |         3.88 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R_gen[10][30]_i_1_n_0 | swb_IBUF[4]      |               12 |             31 |         2.58 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R_gen[7][30]_i_1_n_0  | swb_IBUF[4]      |               23 |             31 |         1.35 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R_fiq[11][30]_i_1_n_0 | swb_IBUF[4]      |               30 |             31 |         1.03 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R_gen[5][30]_i_1_n_0  | swb_IBUF[4]      |               14 |             31 |         2.21 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R_fiq[12][30]_i_1_n_0 | swb_IBUF[4]      |               15 |             31 |         2.07 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R_gen[12][30]_i_1_n_0 | swb_IBUF[4]      |               11 |             31 |         2.82 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R_gen[8][30]_i_1_n_0  | swb_IBUF[4]      |               10 |             31 |         3.10 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R_fiq[14][30]_i_1_n_0 | swb_IBUF[4]      |               17 |             31 |         1.82 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R_gen[6][30]_i_1_n_0  | swb_IBUF[4]      |               18 |             31 |         1.72 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R_gen[4][30]_i_1_n_0  | swb_IBUF[4]      |               10 |             31 |         3.10 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R_gen[13][30]_i_1_n_0 | swb_IBUF[4]      |               11 |             31 |         2.82 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R_fiq                 | swb_IBUF[4]      |               15 |             31 |         2.07 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R_fiq[9][30]_i_1_n_0  | swb_IBUF[4]      |               14 |             31 |         2.21 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R13_abt               | swb_IBUF[4]      |               24 |             31 |         1.29 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/PC                    | swb_IBUF[4]      |                6 |             31 |         5.17 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R13_mon               | swb_IBUF[4]      |               19 |             31 |         1.63 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R13_hyp[30]_i_1_n_0   | swb_IBUF[4]      |               25 |             31 |         1.24 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R13_irq               | swb_IBUF[4]      |               25 |             31 |         1.24 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R13_und               | swb_IBUF[4]      |               10 |             31 |         3.10 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R13_svc               | swb_IBUF[4]      |               18 |             31 |         1.72 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R14_irq               | swb_IBUF[4]      |               16 |             31 |         1.94 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R14_abt               | swb_IBUF[4]      |               12 |             31 |         2.58 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R14_und               | swb_IBUF[4]      |               12 |             31 |         2.58 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R14_mon[30]_i_1_n_0   | swb_IBUF[4]      |               12 |             31 |         2.58 |
+| ~swb_IBUF_BUFG[3] | regFile_Instance/R14_svc               | swb_IBUF[4]      |               12 |             31 |         2.58 |
+|  swb_IBUF_BUFG[1] | PC_New                                 |                  |                6 |             31 |         5.17 |
+|  swb_IBUF_BUFG[6] |                                        | led_OBUF[1]      |               13 |             32 |         2.46 |
++-------------------+----------------------------------------+------------------+------------------+----------------+--------------+
+
+

@@ -162,6 +162,11 @@ module tb_regFile();
 
     M = 5'b10001;   //sys
     R_Addr_A = 15;   
+    #25
+    
+    M = 5'b10111;   //sys
+    Rst = 1;
+    R_Addr_A = 15;
     end
    
     regFile regFile_Instance(

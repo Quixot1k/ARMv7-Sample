@@ -41,7 +41,6 @@ module regFile(
 
     // clk + M[4:0] + Write_Reg + W_Addr
     always @(negedge clk or posedge Rst) begin
-        err1 <= 0;
         // ClEAR
         if(Rst) begin
             for(i=0; i<=14; i=i+1) R_gen[i] <= 0;  
@@ -55,6 +54,7 @@ module regFile(
         // #############################################
         // write common regs 
         else if (Write_Reg) begin // allowed to wirte
+            err1 <= 0;
             case(M[4:0])
                 5'b10000: begin //usr
                     // R0 ~ R14
@@ -173,7 +173,6 @@ module regFile(
                     R_Data_A <= R_gen[R_Addr_A];
                 else if(R_Addr_A == 15)
                     R_Data_PC <= PC;
-                else err2 <= 1;
             end
 
             5'b10001: begin //fiq
@@ -185,7 +184,6 @@ module regFile(
                     R_Data_A <= R_fiq[R_Addr_A];
                 else if(R_Addr_A == 15)
                     R_Data_PC <= PC;
-                else err2 <= 1;
             end
 
             5'b10010: begin //irq
@@ -200,7 +198,6 @@ module regFile(
                     R_Data_A <= R14_irq;
                 else if(R_Addr_A == 15)
                     R_Data_PC <= PC;
-                else err2 <= 1;
             end
 
             5'b10011: begin //svc
@@ -215,7 +212,7 @@ module regFile(
                     R_Data_A <= R14_svc;
                 else if(R_Addr_A == 15)
                     R_Data_PC <= PC;
-                else err2 <= 1;
+
             end
 
             5'b10110: begin //mon
@@ -230,7 +227,6 @@ module regFile(
                     R_Data_A <= R14_mon;
                 else if(R_Addr_A == 15)
                     R_Data_PC <= PC;
-                else err2 <= 1;
             end
 
             5'b10111: begin //abt
@@ -245,7 +241,6 @@ module regFile(
                     R_Data_A <= R14_abt;
                 else if(R_Addr_A == 15)
                     R_Data_PC <= PC;
-                else err2 <= 1;
             end
 
             5'b11010: begin //hyp
@@ -257,9 +252,10 @@ module regFile(
                     R_Data_A <= R13_hyp;
                 // R14
                 // NO R14 !!!
+               else if(R_Addr_A == 14)
+                    err2 <= 1;
                 else if(R_Addr_A == 15)
                     R_Data_PC <= PC;
-                else err2 <= 1;
             end
 
             5'b11011: begin //und
@@ -274,7 +270,6 @@ module regFile(
                     R_Data_A <= R14_und;
                 else if(R_Addr_A == 15)
                     R_Data_PC <= PC;
-                else err2 <= 1;
             end
 
             5'b11111: begin //sys
@@ -283,7 +278,6 @@ module regFile(
                     R_Data_A <= R_gen[R_Addr_A];
                 else if(R_Addr_A == 15)
                     R_Data_PC <= PC;
-                else err2 <= 1;
             end
 
             default: begin
@@ -300,7 +294,6 @@ module regFile(
                     R_Data_B <= R_gen[R_Addr_B];
                 else if(R_Addr_B == 15)
                     R_Data_PC <= PC;
-                else err2 <= 1;
             end
 
             5'b10001: begin //fiq
@@ -312,7 +305,6 @@ module regFile(
                     R_Data_B <= R_fiq[R_Addr_B];
                 else if(R_Addr_B == 15)
                     R_Data_PC <= PC;
-                else err2 <= 1;
             end
 
             5'b10010: begin //irq
@@ -327,7 +319,6 @@ module regFile(
                     R_Data_B <= R14_irq;
                 else if(R_Addr_B == 15)
                     R_Data_PC <= PC;
-                else err2 <= 1;
             end
 
             5'b10011: begin //svc
@@ -342,7 +333,6 @@ module regFile(
                     R_Data_B <= R14_svc;
                 else if(R_Addr_B == 15)
                     R_Data_PC <= PC;
-                else err2 <= 1;
             end
 
             5'b10110: begin //mon
@@ -357,7 +347,6 @@ module regFile(
                     R_Data_B <= R14_mon;
                 else if(R_Addr_B == 15)
                     R_Data_PC <= PC;
-                else err2 <= 1;
             end
 
             5'b10111: begin //abt
@@ -372,7 +361,6 @@ module regFile(
                     R_Data_B <= R14_abt;
                 else if(R_Addr_B == 15)
                     R_Data_PC <= PC;
-                else err2 <= 1;
             end
 
             5'b11010: begin //hyp
@@ -384,9 +372,10 @@ module regFile(
                     R_Data_B <= R13_hyp;
                 // R14
                 // NO R14 !!!
+                else if(R_Addr_A == 14)
+                   err2 <= 1;
                 else if(R_Addr_B == 15)
                     R_Data_PC <= PC;
-                else err2 <= 1;
             end
 
             5'b11011: begin //und
@@ -401,7 +390,6 @@ module regFile(
                     R_Data_B <= R14_und;
                 else if(R_Addr_B == 15)
                     R_Data_PC <= PC;
-                else err2 <= 1;
             end
 
             5'b11111: begin //sys
@@ -410,7 +398,6 @@ module regFile(
                     R_Data_B <= R_gen[R_Addr_B];
                 else if(R_Addr_B == 15)
                     R_Data_PC <= PC;
-                else err2 <= 1;
             end
 
             default: begin
@@ -427,7 +414,6 @@ module regFile(
                     R_Data_C <= R_gen[R_Addr_C];
                 else if(R_Addr_C == 15)
                     R_Data_PC <= PC;
-                else err2 <= 1;
             end
 
             5'b10001: begin //fiq
@@ -439,7 +425,6 @@ module regFile(
                     R_Data_C <= R_fiq[R_Addr_C];
                 else if(R_Addr_C == 15)
                     R_Data_PC <= PC;
-                else err2 <= 1;
             end
 
             5'b10010: begin //irq
@@ -454,7 +439,6 @@ module regFile(
                     R_Data_C <= R14_irq;
                 else if(R_Addr_C == 15)
                     R_Data_PC <= PC;
-                else err2 <= 1;
             end
 
             5'b10011: begin //svc
@@ -469,7 +453,6 @@ module regFile(
                     R_Data_C <= R14_svc;
                 else if(R_Addr_C == 15)
                     R_Data_PC <= PC;
-                else err2 <= 1;
             end
 
             5'b10110: begin //mon
@@ -484,7 +467,6 @@ module regFile(
                     R_Data_C <= R14_mon;
                 else if(R_Addr_C == 15)
                     R_Data_PC <= PC;
-                else err2 <= 1;
             end
 
             5'b10111: begin //abt
@@ -499,7 +481,6 @@ module regFile(
                     R_Data_C <= R14_abt;
                 else if(R_Addr_C == 15)
                     R_Data_PC <= PC;
-                else err2 <= 1;
             end
 
             5'b11010: begin //hyp
@@ -511,9 +492,10 @@ module regFile(
                     R_Data_C <= R13_hyp;
                 // R14
                 // NO R14 !!!
+                else if(R_Addr_A == 14)
+                    err2 <= 1;
                 else if(R_Addr_C == 15)
                     R_Data_PC <= PC;
-                else err2 <= 1;
             end
 
             5'b11011: begin //und
@@ -528,7 +510,6 @@ module regFile(
                     R_Data_C <= R14_und;
                 else if(R_Addr_C == 15)
                     R_Data_PC <= PC;
-                else err2 <= 1;
             end
 
             5'b11111: begin //sys
@@ -537,7 +518,6 @@ module regFile(
                     R_Data_C <= R_gen[R_Addr_C];
                 else if(R_Addr_C == 15)
                     R_Data_PC <= PC;
-                else err2 <= 1;
             end
 
             default: begin

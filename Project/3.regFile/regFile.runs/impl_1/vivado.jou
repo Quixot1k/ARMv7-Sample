@@ -2,11 +2,11 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Tue Apr 27 13:07:51 2021
-# Process ID: 9948
+# Start of session at: Thu Apr 29 21:42:42 2021
+# Process ID: 3272
 # Current directory: C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.runs/impl_1
-# Command line: vivado.exe -log regFile.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source regFile.tcl -notrace
-# Log file: C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.runs/impl_1/regFile.vdi
+# Command line: vivado.exe -log Board.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Board.tcl -notrace
+# Log file: C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.runs/impl_1/Board.vdi
 # Journal file: C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
-source regFile.tcl -notrace
+source Board.tcl -notrace
