@@ -1,0 +1,2 @@
+Inst_Rom.v,verilog,xil_defaultlib,../../../../getInsBus.gen/sources_1/ip/Inst_Rom/sim/Inst_Rom.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

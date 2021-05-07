@@ -2,11 +2,11 @@
 2020.2
 Nov 18 2020
 09:47:47
-C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,,,,,,,
-C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sim_1/new/tb_regFile.v,1619705517,verilog,,,,tb_regFile,,,,,,,,
-C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sim_1/new/tb_regFile_implementation.v,1619500255,verilog,,C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sim_1/new/tb_regfile_User_Sys_State.v,,tb_regFile_implementation,,,,,,,,
-C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sim_1/new/tb_regfile_User_Sys_State.v,1619355558,verilog,,C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sim_1/new/tb_regFile.v,,tb_regfile_User_Sys_State,,,,,,,,
-C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sources_1/new/Board.v,1619442678,verilog,,C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sources_1/new/regfile_Usr_Sys_State.v,,Board,,,,,,,,
-C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sources_1/new/Display.v,1619355291,verilog,,C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sources_1/new/Board.v,,Display,,,,,,,,
-C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sources_1/new/regFile.v,1619705234,verilog,,C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sources_1/new/Display.v,,regFile,,,,,,,,
-C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sources_1/new/regfile_Usr_Sys_State.v,1619425517,verilog,,C:/Users/GAO/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sim_1/new/tb_regFile_implementation.v,,regfile_User_Sys_State,,,,,,,,
+C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.sim/sim_1/behav/xsim/glbl.v,1619280549,verilog,,,,glbl,,,,,,,,
+C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sim_1/new/tb_regFile.v,1619926139,verilog,,,,tb_regFile,,,,,,,,
+C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sim_1/new/tb_regFile_implementation.v,1619926139,verilog,,C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sim_1/new/tb_regfile_User_Sys_State.v,,tb_regFile_implementation,,,,,,,,
+C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sim_1/new/tb_regfile_User_Sys_State.v,1619402478,verilog,,C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sim_1/new/tb_regFile.v,,tb_regfile_User_Sys_State,,,,,,,,
+C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sources_1/new/Board.v,1619926139,verilog,,C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sources_1/new/regfile_Usr_Sys_State.v,,Board,,,,,,,,
+C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sources_1/new/Display.v,1619280549,verilog,,C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sources_1/new/Board.v,,Display,,,,,,,,
+C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sources_1/new/regFile.v,1619926139,verilog,,C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sources_1/new/Display.v,,regFile,,,,,,,,
+C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sources_1/new/regfile_Usr_Sys_State.v,1619402478,verilog,,C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/3.regFile/regFile.srcs/sim_1/new/tb_regFile_implementation.v,,regfile_User_Sys_State,,,,,,,,
