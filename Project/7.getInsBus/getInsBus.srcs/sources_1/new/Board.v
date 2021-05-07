@@ -18,45 +18,51 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-module Board(sw, swb, led, clk, which, seg, enable, 
-            NZCV, Write_PC, Write_IR);
+module Board(sw, swb, led, clk, which, seg, enable);
 
-    input clk; 
     input [1:32] sw;
     input [1:6] swb;
     output [1:32] led;
+    input clk; 
     output [2:0] which;
     output [7:0] seg;
     output reg enable = 1;
-
     reg [3:0] NZCV;
-    reg Write_PC;
-    reg Write_IR;
+    reg Write_IR, Write_PC;
+    
+    wire [31:28] Inst_condition;
+    wire [27:0] Inst_left;
+    wire [7:2] PC;
+    wire flag;
+    reg [32:1] data;
 
-    always @(posedge swb[2]) begin 
+    top top_Instance(
+        .clk(swb[1]),
+        .Rst(swb[2]),
+        .Write_IR(Write_IR),
+        .Write_PC(Write_PC),
+        .NZCV(NZCV),
+        .flag(flag),
+        .PC(PC),
+        .Inst_condition(Inst_condition),
+        .Inst_left(Inst_left)
+    );
+    
+    always @(*)
+    begin
+        NZCV = sw[1:4];
         Write_PC = sw[32];
         Write_IR = sw[31];
-        NZCV = sw[1:4];
+        data = {Inst_condition, Inst_left};
     end
     
-    top top_Instace(
-        // input
-        .clk(swb[2]),
-        .Rst(swb[1]),
-        .NZCV(NZCV),
-        .Write_PC(Write_PC),
-        .Write_IR(Write_IR),
-        // output
-        .Inst(data),
-        .PC(led[2:7]),
-        .condition(led[31])
-    );
-
+    assign led[27:32] = PC;
+    assign led[1] = flag;
+    
     Display Display_Instance(
-        .clk(clk),
-        .data(data),
-        .which(which),
-        .seg(seg)
-    );
+    .clk(clk), 
+    .data(data),
+    .which(which), 
+    .seg(seg));
     
 endmodule

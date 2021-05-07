@@ -30,7 +30,7 @@ module PC(
     always@(negedge clk or posedge Rst ) begin 
         if(Rst) begin
             PC <= 32'h00000000;
-            PC <= PC_New;
+            //PC <= PC_New;
         end
         else begin 
             if(Write_PC) begin

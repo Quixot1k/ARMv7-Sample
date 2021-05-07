@@ -23,14 +23,19 @@ module top(
     // input
     input clk,
     input Rst,
-    input [3:0] NZCV, // from CSPR[32:28]
     input Write_PC,
     input Write_IR,
+    input [3:0] NZCV, // from CSPR[32:28]
     // output
-    output [31:0] Inst, // also inside wire
-    output [7:2] PC,   // also inside wire
-    output condition
+    output flag,
+    output [7:2] PC,
+    output [31:28] Inst_condition, 
+    output [27:0] Inst_left 
 );
+
+wire [31:0] Inst;
+assign Inst_condition = Inst[31:28];  
+assign Inst_left = Inst[27:0]; 
 
 // PC
 PC PC_Instance(
@@ -56,6 +61,6 @@ Inst_Reg Inst_Reg_Instance(
     .NZCV(NZCV),
     .Write_IR(Write_IR),
     .Inst(Inst),
-    .condition(condition)
+    .flag(flag)
 );
 endmodule

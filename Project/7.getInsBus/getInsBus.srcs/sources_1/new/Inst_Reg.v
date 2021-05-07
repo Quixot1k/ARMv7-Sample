@@ -28,7 +28,7 @@ module Inst_Reg(
     input Write_IR,
     //output
     output reg IR,
-    output reg condition
+    output reg flag
     );
     assign VF = NZCV[0]; 
     assign CF = NZCV[1];
@@ -46,66 +46,66 @@ module Inst_Reg(
                 case(Inst[31:28])
                     4'b0000: begin //EQ
                         if(ZF == 1) IR <= Inst[27:0];
-                        condition <= 1;
+                        flag <= 1;
                     end
                     4'b0001: begin //NE
                         if(ZF == 0) IR <= Inst[27:0];
-                        condition <= 1;
+                        flag <= 1;
                     end
                     4'b0010: begin //CS
                         if(CF == 1) IR <= Inst[27:0];
-                        condition <= 1;
+                        flag <= 1;
                     end
                     4'b0011: begin //CC
                         if(CF == 0) IR <= Inst[27:0];
-                        condition <= 1;
+                        flag <= 1;
                     end
                     4'b0100: begin //MI
                         if(NF == 1) IR <= Inst[27:0];
-                        condition <= 1; 
+                        flag <= 1; 
                     end
                     4'b0101: begin //PL
                         if(NF == 0) IR <= Inst[27:0]; 
-                        condition <= 1;
+                        flag <= 1;
                     end
                     4'b0110: begin //VS
                         if(VF == 1) IR <= Inst[27:0];
-                        condition <= 1;
+                        flag <= 1;
                     end
                     4'b0111: begin //VC
                         if(VF == 0) IR <= Inst[27:0];
-                        condition <= 1;
+                        flag <= 1;
                     end
                     4'b1000: begin //HI
                         if(CF == 1 && ZF == 0) IR <= Inst[27:0];
-                        condition <= 1;
+                        flag <= 1;
                     end
                     4'b1001: begin //LS
                         if(CF == 0 && ZF == 1) IR <= Inst[27:0];
-                        condition <= 1;
+                        flag <= 1;
                     end
                     4'b1010: begin //GE
                         if(NF == VF) IR <= Inst[27:0];
-                        condition <= 1;
+                        flag <= 1;
                     end
                     4'b1011: begin //LT
                         if(NF != VF) IR <= Inst[27:0];
-                        condition <= 1;
+                        flag <= 1;
                     end
                     4'b1100: begin //GT
                         if(ZF == 0 && NF == VF) IR <= Inst[27:0];
-                        condition <= 1;
+                        flag <= 1;
                     end
                     4'b1101: begin //LE
                         if(ZF == 1 && NF != VF) IR <= Inst[27:0];
-                        condition <= 1;
+                        flag <= 1;
                     end
                     4'b1110: begin //AL
                         IR <= Inst[27:0];  
-                        condition <= 1;
+                        flag <= 1;
                     end
                     default: begin 
-                        condition <= 0;
+                        flag <= 0;
                     end
                 endcase
             end
