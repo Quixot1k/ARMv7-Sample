@@ -25,17 +25,14 @@ module PC(
     input Write_PC,
     output reg [31:0] PC
 );
-    wire PC_New;
-    assign PC_new = PC+4;
+    wire [31:0] PC_New;
+    assign PC_New = PC + 4;
     always@(negedge clk or posedge Rst ) begin 
         if(Rst) begin
-            PC <= 32'h00000000;
-            //PC <= PC_New;
+            PC <= 0;
         end
-        else begin 
-            if(Write_PC) begin
-                PC <= PC_New;
-            end
+        else if(Write_PC) begin
+            PC <= PC_New;
         end
     end
 endmodule

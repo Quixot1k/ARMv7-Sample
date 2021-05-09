@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../getInsBus.gen/sources_1/ip/Inst_Rom/sim/Inst_Rom.v" \
+"../../../../getInsBus.srcs/sources_1/new/Inst_Reg.v" \
+"../../../../getInsBus.srcs/sources_1/new/PC.v" \
+"../../../../getInsBus.srcs/sources_1/new/top.v" \
+"../../../../getInsBus.srcs/sim_1/new/tb_top_implementation.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

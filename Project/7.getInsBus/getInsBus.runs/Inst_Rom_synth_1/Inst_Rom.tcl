@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.runs/Inst_Rom_synth_1/Inst_Rom.tcl"
+  variable script "C:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.runs/Inst_Rom_synth_1/Inst_Rom.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "Inst_Rom_synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -79,17 +80,17 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.cache/wt [current_project]
-set_property parent.project_path C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.xpr [current_project]
+set_property webtalk.parent_dir {C:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.cache/wt} [current_project]
+set_property parent.project_path {C:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.xpr} [current_project]
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.cache/ip [current_project]
+set_property ip_output_repo {c:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.srcs/sources_1/ip/Inst_Rom/Inst_Rom.xci
-set_property used_in_implementation false [get_files -all c:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.gen/sources_1/ip/Inst_Rom/Inst_Rom_ooc.xdc]
+read_ip -quiet {{C:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.srcs/sources_1/ip/Inst_Rom/Inst_Rom.xci}}
+set_property used_in_implementation false [get_files -all {{c:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.gen/sources_1/ip/Inst_Rom/Inst_Rom_ooc.xdc}}]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -105,7 +106,7 @@ set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 OPTRACE "Configure IP Cache" START { }
 
-set cached_ip [config_ip_cache -export -no_bom  -dir C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.runs/Inst_Rom_synth_1 -new_name Inst_Rom -ip [get_ips Inst_Rom]]
+set cached_ip [config_ip_cache -export -no_bom  -dir {C:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.runs/Inst_Rom_synth_1} -new_name Inst_Rom -ip [get_ips Inst_Rom]]
 
 OPTRACE "Configure IP Cache" END { }
 if { $cached_ip eq {} } {
@@ -160,32 +161,32 @@ create_report "Inst_Rom_synth_1_synth_report_utilization_0" "report_utilization 
 OPTRACE "synth reports" END { }
 
 if { [catch {
-  file copy -force C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.runs/Inst_Rom_synth_1/Inst_Rom.dcp c:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.gen/sources_1/ip/Inst_Rom/Inst_Rom.dcp
+  file copy -force {C:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.runs/Inst_Rom_synth_1/Inst_Rom.dcp} {c:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.gen/sources_1/ip/Inst_Rom/Inst_Rom.dcp}
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub c:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.gen/sources_1/ip/Inst_Rom/Inst_Rom_stub.v
+  write_verilog -force -mode synth_stub {c:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.gen/sources_1/ip/Inst_Rom/Inst_Rom_stub.v}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub c:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.gen/sources_1/ip/Inst_Rom/Inst_Rom_stub.vhdl
+  write_vhdl -force -mode synth_stub {c:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.gen/sources_1/ip/Inst_Rom/Inst_Rom_stub.vhdl}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim c:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.gen/sources_1/ip/Inst_Rom/Inst_Rom_sim_netlist.v
+  write_verilog -force -mode funcsim {c:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.gen/sources_1/ip/Inst_Rom/Inst_Rom_sim_netlist.v}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim c:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.gen/sources_1/ip/Inst_Rom/Inst_Rom_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim {c:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.gen/sources_1/ip/Inst_Rom/Inst_Rom_sim_netlist.vhdl}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -195,47 +196,47 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.runs/Inst_Rom_synth_1/Inst_Rom.dcp c:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.gen/sources_1/ip/Inst_Rom/Inst_Rom.dcp
+  file copy -force {C:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.runs/Inst_Rom_synth_1/Inst_Rom.dcp} {c:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.gen/sources_1/ip/Inst_Rom/Inst_Rom.dcp}
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.runs/Inst_Rom_synth_1/Inst_Rom_stub.v c:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.gen/sources_1/ip/Inst_Rom/Inst_Rom_stub.v
+  file rename -force {C:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.runs/Inst_Rom_synth_1/Inst_Rom_stub.v} {c:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.gen/sources_1/ip/Inst_Rom/Inst_Rom_stub.v}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.runs/Inst_Rom_synth_1/Inst_Rom_stub.vhdl c:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.gen/sources_1/ip/Inst_Rom/Inst_Rom_stub.vhdl
+  file rename -force {C:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.runs/Inst_Rom_synth_1/Inst_Rom_stub.vhdl} {c:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.gen/sources_1/ip/Inst_Rom/Inst_Rom_stub.vhdl}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.runs/Inst_Rom_synth_1/Inst_Rom_sim_netlist.v c:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.gen/sources_1/ip/Inst_Rom/Inst_Rom_sim_netlist.v
+  file rename -force {C:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.runs/Inst_Rom_synth_1/Inst_Rom_sim_netlist.v} {c:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.gen/sources_1/ip/Inst_Rom/Inst_Rom_sim_netlist.v}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.runs/Inst_Rom_synth_1/Inst_Rom_sim_netlist.vhdl c:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.gen/sources_1/ip/Inst_Rom/Inst_Rom_sim_netlist.vhdl
+  file rename -force {C:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.runs/Inst_Rom_synth_1/Inst_Rom_sim_netlist.vhdl} {c:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.gen/sources_1/ip/Inst_Rom/Inst_Rom_sim_netlist.vhdl}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 }; # end if cached_ip 
 
-if {[file isdir C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.ip_user_files/ip/Inst_Rom]} {
+if {[file isdir {C:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.ip_user_files/ip/Inst_Rom}]} {
   catch { 
-    file copy -force c:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.gen/sources_1/ip/Inst_Rom/Inst_Rom_stub.v C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.ip_user_files/ip/Inst_Rom
+    file copy -force {{c:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.gen/sources_1/ip/Inst_Rom/Inst_Rom_stub.v}} {C:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.ip_user_files/ip/Inst_Rom}
   }
 }
 
-if {[file isdir C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.ip_user_files/ip/Inst_Rom]} {
+if {[file isdir {C:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.ip_user_files/ip/Inst_Rom}]} {
   catch { 
-    file copy -force c:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.gen/sources_1/ip/Inst_Rom/Inst_Rom_stub.vhdl C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.ip_user_files/ip/Inst_Rom
+    file copy -force {{c:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.gen/sources_1/ip/Inst_Rom/Inst_Rom_stub.vhdl}} {C:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.ip_user_files/ip/Inst_Rom}
   }
 }
 file delete __synthesis_is_running__

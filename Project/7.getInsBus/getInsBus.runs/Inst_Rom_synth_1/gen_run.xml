@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="Inst_Rom_synth_1" LaunchPart="xc7a100tfgg484-2L" LaunchTime="1620401936">
+<GenRun Id="Inst_Rom_synth_1" LaunchPart="xc7a100tfgg484-2L" LaunchTime="1620442462">
   <File Type="PA-TCL" Name="Inst_Rom.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="Inst_Rom_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Inst_Rom_reports.tcl"/>
   <File Type="RDS-RDS" Name="Inst_Rom.vds"/>
-  <File Type="RDS-UTIL" Name="Inst_Rom_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="Inst_Rom_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="Inst_Rom.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="Inst_Rom_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="Inst_Rom_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Inst_Rom">
     <File Path="$PSRCDIR/sources_1/ip/Inst_Rom/Inst_Rom.xci">
       <FileInfo>
