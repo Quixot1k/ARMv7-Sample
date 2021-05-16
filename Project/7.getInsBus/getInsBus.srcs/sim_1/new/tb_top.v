@@ -32,6 +32,8 @@ module tb_top_normal();
     wire [31:28] Inst_condition;
     wire [27:0] Inst_left;
     
+    integer i;
+    
     always #10 clk = ~clk;
     initial begin
     Rst = 1;
@@ -40,7 +42,10 @@ module tb_top_normal();
     #50;
     Write_IR = 1;
     Write_PC = 1;
-    NZCV = 4'b1110;
+    for(i=0; i<15; i=i+1) begin 
+        NZCV = i;
+        #50;
+    end
     end
     
 top top_Instance(

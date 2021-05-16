@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon May 17 02:34:34 2021
+# Process ID: 11664
+# Current directory: C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/dataProcessing/dataProcessing.runs/Inst_ROM_synth_1
+# Command line: vivado.exe -log Inst_ROM.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Inst_ROM.tcl
+# Log file: C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/dataProcessing/dataProcessing.runs/Inst_ROM_synth_1/Inst_ROM.vds
+# Journal file: C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/dataProcessing/dataProcessing.runs/Inst_ROM_synth_1\vivado.jou
+#-----------------------------------------------------------
+source Inst_ROM.tcl -notrace
