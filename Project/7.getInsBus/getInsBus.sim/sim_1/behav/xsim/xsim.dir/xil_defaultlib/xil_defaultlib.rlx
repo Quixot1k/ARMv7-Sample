@@ -2,10 +2,10 @@
 2020.2
 Nov 18 2020
 09:47:47
-C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.gen/sources_1/ip/Inst_Rom/sim/Inst_Rom.v,1620442462,verilog,,C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.srcs/sources_1/new/Inst_Reg.v,,Inst_Rom,,,,,,,,
-C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,,,,,,,
-C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.srcs/sim_1/new/tb_top.v,1620613114,verilog,,,,tb_top_normal,,,,,,,,
-C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.srcs/sim_1/new/tb_top_implementation.v,1620472884,verilog,,,,tb_top_implementation,,,,,,,,
-C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.srcs/sources_1/new/Inst_Reg.v,1620474016,verilog,,C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.srcs/sources_1/new/PC.v,,Inst_Reg,,,,,,,,
-C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.srcs/sources_1/new/PC.v,1620476067,verilog,,C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.srcs/sources_1/new/top.v,,PC,,,,,,,,
-C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.srcs/sources_1/new/top.v,1620471677,verilog,,C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.srcs/sim_1/new/tb_top.v,,top,,,,,,,,
+C:/Users/yanweipeng/Desktop/7.getInsBus/getInsBus.gen/sources_1/ip/Inst_Rom/sim/Inst_Rom.v,1620613516,verilog,,C:/Users/yanweipeng/Desktop/7.getInsBus/getInsBus.srcs/sources_1/new/Inst_Reg.v,,Inst_Rom,,,,,,,,
+C:/Users/yanweipeng/Desktop/7.getInsBus/getInsBus.sim/sim_1/behav/xsim/glbl.v,1605673890,verilog,,,,glbl,,,,,,,,
+C:/Users/yanweipeng/Desktop/7.getInsBus/getInsBus.srcs/sim_1/new/tb_top.v,1620613116,verilog,,,,tb_top_normal,,,,,,,,
+,,,,,,tb_top_implementation,,,,,,,,
+C:/Users/yanweipeng/Desktop/7.getInsBus/getInsBus.srcs/sources_1/new/Inst_Reg.v,1620617021,verilog,,C:/Users/yanweipeng/Desktop/7.getInsBus/getInsBus.srcs/sources_1/new/PC.v,,Inst_Reg,,,,,,,,
+C:/Users/yanweipeng/Desktop/7.getInsBus/getInsBus.srcs/sources_1/new/PC.v,1620476068,verilog,,C:/Users/yanweipeng/Desktop/7.getInsBus/getInsBus.srcs/sources_1/new/top.v,,PC,,,,,,,,
+C:/Users/yanweipeng/Desktop/7.getInsBus/getInsBus.srcs/sources_1/new/top.v,1620616865,verilog,,C:/Users/yanweipeng/Desktop/7.getInsBus/getInsBus.srcs/sim_1/new/tb_top_implementation.v,,top,,,,,,,,

@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/7.getInsBus/getInsBus.srcs/constrs_1/new/Board.xdc rfile:../getInsBus.srcs/constrs_1/new/Board.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/yanweipeng/Desktop/7.getInsBus/getInsBus.srcs/constrs_1/new/Board.xdc rfile:../getInsBus.srcs/constrs_1/new/Board.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]
 set_property PULLDOWN true [get_ports sw]
 set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]

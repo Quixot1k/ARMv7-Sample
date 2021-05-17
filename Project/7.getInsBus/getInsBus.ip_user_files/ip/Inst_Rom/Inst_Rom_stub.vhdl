@@ -1,8 +1,8 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Tue May  4 14:44:01 2021
--- Host        : DESKTOP-0M5LT11 running 64-bit major release  (build 9200)
+-- Date        : Sat May  8 10:16:30 2021
+-- Host        : LAPTOP-A0RAU22K running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top Inst_Rom -prefix
 --               Inst_Rom_ Inst_Rom_stub.vhdl
 -- Design      : Inst_Rom

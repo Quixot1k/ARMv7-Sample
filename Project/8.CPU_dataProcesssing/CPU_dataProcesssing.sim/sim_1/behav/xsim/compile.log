@@ -1,0 +1,26 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/8.CPU_dataProcesssing/CPU_dataProcesssing.gen/sources_1/ip/Inst_ROM/sim/Inst_ROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Inst_ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/8.CPU_dataProcesssing/CPU_dataProcesssing.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/8.CPU_dataProcesssing/CPU_dataProcesssing.srcs/sources_1/new/ALU_barrelShifter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_barrelShifter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/8.CPU_dataProcesssing/CPU_dataProcesssing.srcs/sources_1/new/Inst_Mod.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Inst_Mod
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/8.CPU_dataProcesssing/CPU_dataProcesssing.srcs/sources_1/new/Inst_Reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Inst_Reg
+INFO: [VRFC 10-2458] undeclared symbol VF, assumed default net type wire [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/8.CPU_dataProcesssing/CPU_dataProcesssing.srcs/sources_1/new/Inst_Reg.v:17]
+INFO: [VRFC 10-2458] undeclared symbol CF, assumed default net type wire [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/8.CPU_dataProcesssing/CPU_dataProcesssing.srcs/sources_1/new/Inst_Reg.v:18]
+INFO: [VRFC 10-2458] undeclared symbol ZF, assumed default net type wire [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/8.CPU_dataProcesssing/CPU_dataProcesssing.srcs/sources_1/new/Inst_Reg.v:19]
+INFO: [VRFC 10-2458] undeclared symbol NF, assumed default net type wire [C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/8.CPU_dataProcesssing/CPU_dataProcesssing.srcs/sources_1/new/Inst_Reg.v:20]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/8.CPU_dataProcesssing/CPU_dataProcesssing.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/8.CPU_dataProcesssing/CPU_dataProcesssing.srcs/sources_1/new/RegFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/8.CPU_dataProcesssing/CPU_dataProcesssing.srcs/sources_1/new/barrelShifter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module barrelShifter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/8.CPU_dataProcesssing/CPU_dataProcesssing.srcs/sources_1/new/top_CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/8.CPU_dataProcesssing/CPU_dataProcesssing.srcs/sim_1/new/tb_top_CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top_CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/8.CPU_dataProcesssing/CPU_dataProcesssing.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

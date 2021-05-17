@@ -2,13 +2,13 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Sat May  8 10:54:25 2021
-# Process ID: 10076
-# Current directory: C:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.runs/Inst_Rom_synth_1
+# Start of session at: Mon May 10 10:35:44 2021
+# Process ID: 31592
+# Current directory: C:/Users/yanweipeng/Desktop/7.getInsBus/getInsBus.runs/Inst_Rom_synth_1
 # Command line: vivado.exe -log Inst_Rom.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Inst_Rom.tcl
-# Log file: C:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.runs/Inst_Rom_synth_1/Inst_Rom.vds
-# Journal file: C:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.runs/Inst_Rom_synth_1\vivado.jou
+# Log file: C:/Users/yanweipeng/Desktop/7.getInsBus/getInsBus.runs/Inst_Rom_synth_1/Inst_Rom.vds
+# Journal file: C:/Users/yanweipeng/Desktop/7.getInsBus/getInsBus.runs/Inst_Rom_synth_1\vivado.jou
 #-----------------------------------------------------------
 source Inst_Rom.tcl -notrace
 INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP Inst_Rom, cache-ID = 9878e3b199b34d93.
-INFO: [Common 17-206] Exiting Vivado at Sat May  8 10:54:32 2021...
+INFO: [Common 17-206] Exiting Vivado at Mon May 10 10:35:50 2021...

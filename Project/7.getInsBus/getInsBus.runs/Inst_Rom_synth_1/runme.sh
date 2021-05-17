@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/yanweipeng/Documents/Tencent Files/1437310561/FileRecv/7.getInsBus/7.getInsBus/getInsBus.runs/Inst_Rom_synth_1'
+HD_PWD='C:/Users/yanweipeng/Desktop/7.getInsBus/getInsBus.runs/Inst_Rom_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
