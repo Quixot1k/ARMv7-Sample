@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Mon May 17 17:42:00 2021
+-- Date        : Mon May 17 17:41:59 2021
 -- Host        : GAO-PC running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/CPU_dataProcesssing/CPU_dataProcesssing.gen/sources_1/ip/Inst_ROM/Inst_ROM_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top Inst_ROM -prefix
+--               Inst_ROM_ Inst_ROM_stub.vhdl
 -- Design      : Inst_ROM
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tfgg484-2L

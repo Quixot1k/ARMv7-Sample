@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_top_CPU_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_top_CPU" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="694862fs"></ZoomEndTime>
+      <Cursor1Time time="300000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="181"></NameColumnWidth>
+      <ValueColumnWidth column_width="86"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="21" />
+   <wvobject fp_name="/tb_top_CPU/Inst" type="array">
+      <obj_property name="ElementShortName">Inst[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Inst[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_CPU/A" type="array">
+      <obj_property name="ElementShortName">A[31:0]</obj_property>
+      <obj_property name="ObjectShortName">A[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_CPU/B" type="array">
+      <obj_property name="ElementShortName">B[31:0]</obj_property>
+      <obj_property name="ObjectShortName">B[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_CPU/C" type="array">
+      <obj_property name="ElementShortName">C[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_CPU/F" type="array">
+      <obj_property name="ElementShortName">F[31:0]</obj_property>
+      <obj_property name="ObjectShortName">F[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_CPU/NZCV" type="array">
+      <obj_property name="ElementShortName">NZCV[3:0]</obj_property>
+      <obj_property name="ObjectShortName">NZCV[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_CPU/Inst_Addr" type="array">
+      <obj_property name="ElementShortName">Inst_Addr[5:0]</obj_property>
+      <obj_property name="ObjectShortName">Inst_Addr[5:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_CPU/LA" type="logic">
+      <obj_property name="ElementShortName">LA</obj_property>
+      <obj_property name="ObjectShortName">LA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_CPU/LB" type="logic">
+      <obj_property name="ElementShortName">LB</obj_property>
+      <obj_property name="ObjectShortName">LB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_CPU/LC" type="logic">
+      <obj_property name="ElementShortName">LC</obj_property>
+      <obj_property name="ObjectShortName">LC</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_CPU/LF" type="logic">
+      <obj_property name="ElementShortName">LF</obj_property>
+      <obj_property name="ObjectShortName">LF</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_CPU/Write_PC" type="logic">
+      <obj_property name="ElementShortName">Write_PC</obj_property>
+      <obj_property name="ObjectShortName">Write_PC</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_CPU/Write_IR" type="logic">
+      <obj_property name="ElementShortName">Write_IR</obj_property>
+      <obj_property name="ObjectShortName">Write_IR</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_CPU/Write_Reg" type="logic">
+      <obj_property name="ElementShortName">Write_Reg</obj_property>
+      <obj_property name="ObjectShortName">Write_Reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_CPU/S" type="logic">
+      <obj_property name="ElementShortName">S</obj_property>
+      <obj_property name="ObjectShortName">S</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_CPU/rm_imm_s" type="logic">
+      <obj_property name="ElementShortName">rm_imm_s</obj_property>
+      <obj_property name="ObjectShortName">rm_imm_s</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_CPU/rs_imm_s" type="array">
+      <obj_property name="ElementShortName">rs_imm_s[1:0]</obj_property>
+      <obj_property name="ObjectShortName">rs_imm_s[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_CPU/ALU_OP" type="array">
+      <obj_property name="ElementShortName">ALU_OP[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_OP[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_CPU/SHIFT_OP" type="array">
+      <obj_property name="ElementShortName">SHIFT_OP[2:0]</obj_property>
+      <obj_property name="ObjectShortName">SHIFT_OP[2:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_CPU/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_CPU/Rst" type="logic">
+      <obj_property name="ElementShortName">Rst</obj_property>
+      <obj_property name="ObjectShortName">Rst</obj_property>
+   </wvobject>
+</wave_config>
