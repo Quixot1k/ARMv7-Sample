@@ -8,7 +8,7 @@
   "../../../ipstatic/simulation/blk_mem_gen_v8_4.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../../CPU_branchJumping.gen/sources_1/ip/Inst_ROM/sim/Inst_ROM.v" \
+  "../../../ip/Inst_ROM/sim/Inst_ROM.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   glbl.v

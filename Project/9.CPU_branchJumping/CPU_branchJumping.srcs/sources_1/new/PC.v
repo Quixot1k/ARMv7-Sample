@@ -4,13 +4,13 @@ module PC(
     input clk,
     input Rst,
     input Write_PC,
-    input [1:0]PC_s,
+    input [1:0] PC_s,
     input [31:0] B, F,
     output reg [31:0] PC
 );
     wire [31:0] PC_New;
     assign PC_New = PC + 4;
-    always@(negedge clk or posedge Rst ) begin 
+    always@(negedge clk or posedge Rst) begin 
         if(Rst) begin
             PC <= 0;
         end

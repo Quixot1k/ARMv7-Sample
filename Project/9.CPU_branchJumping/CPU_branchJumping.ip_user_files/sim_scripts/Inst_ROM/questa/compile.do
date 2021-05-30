@@ -19,7 +19,7 @@ vlog -work blk_mem_gen_v8_4_4  \
 "../../../ipstatic/simulation/blk_mem_gen_v8_4.v" \
 
 vlog -work xil_defaultlib  \
-"../../../../CPU_branchJumping.gen/sources_1/ip/Inst_ROM/sim/Inst_ROM.v" \
+"../../../ip/Inst_ROM/sim/Inst_ROM.v" \
 
 
 vlog -work xil_defaultlib \

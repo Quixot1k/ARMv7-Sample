@@ -1,51 +1,51 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
 
 module top_CPU(
-    input clk,
-    input Rst,
+    input clk,Rst,
     output [31:0] Inst,
-    output reg [31:0] A,B,C,F,
-    output reg [3:0] NZCV,
+    output [31:0] A,B,C,F,Shift_Out,
+    output  [3:0] NZCV,
     output [5:0] Inst_Addr,
     output reg Write_PC,Write_IR,Write_Reg,S,
     output reg rm_imm_s,
-    output reg [1:0] rs_imm_s, PC_s,
+    output reg [1:0] rs_imm_s,PC_s,
     output reg [3:0] ALU_OP,
     output [2:0] SHIFT_OP,
-    output reg LA,LB,LC,LF,
-    output reg rd_s,ALU_A_s,ALU_B_s
+    output reg LA,LB,LC,LF,rd_s,ALU_A_s,ALU_B_s,
+    output [31:0] PC
 );
     
-    wire flag;
-    wire[31:28] cond;
+    //�?�指令
+    wire flag;//�?�件判�-��"果
+    wire[31:28] cond;//�?�件�?
     wire [27:0] IR;
-    Inst_Mod Inst_Mod_Instance(
-        .clk(clk),
-        .Rst(Rst),
-        .Write_IR(Write_IR),
-        .Write_PC(Write_PC),
-        .NZCV(NZCV),
-        .flag(flag),
-        .Inst_Addr(Inst_Addr),
-        .cond(cond),
-        .IR(IR),
-        .B(B),
-        .F(F),
-        .PC_s(PC_s)
-    );
+    Inst_Mod_2 Inst_Mod_2_Instance(
+    .clk(clk),
+    .Rst(Rst),
+    .Write_IR(Write_IR),
+    .Write_PC(Write_PC),
+    .NZCV(NZCV),
+    .flag(flag),
+    .PC(PC),
+    .cond(cond),
+    .IR(IR),
+    .B(B),
+    .F(F),
+    .PC_s(PC_s));
     
-    assign Inst = {cond,IR};
+    assign Inst_Addr = PC[7:2];
+    assign Inst = {cond, IR};
     
+    //指令�'�?
     parameter DP0 = 3'd0;
     parameter DP1 = 3'd1;
     parameter DP2 = 3'd2;
     parameter B1  = 3'd3;
     parameter BL  = 3'd4;
     parameter BX  = 3'd5;
-    parameter Und = 3'd6;
+    parameter Und = 3'd6;//未定义指令
     
-    reg [2:0] DP;
+    reg [2:0] DP;//指令� ��?
     wire [3:0] OP,rn,rd,rs,rm;
     wire [4:0] imm5;
     wire [1:0] type;
@@ -61,6 +61,7 @@ module top_CPU(
     assign rm    = IR[3:0];
     assign imm12 = IR[11:0];
     assign imm24 = IR[23:0];
+    
     
     always@(*)
     begin
@@ -92,70 +93,25 @@ module top_CPU(
     wire Und_Ins;
     assign Und_Ins = DP == Und;
     
-    wire [31:0] R_Data_A, R_Data_B, R_Data_C;
     wire [3:0] W_Addr;
     assign W_Addr = rd_s?4'b1110:rd;
-    RegFile RegFile_Instance(
-        .clk(clk),
-        .Rst(Rst),
-        .Write_Reg(Write_Reg),
-        .R_Addr_A(rn),
-        .R_Addr_B(rm),
-        .R_Addr_C(rs),
-        .W_Addr(W_Addr),
-        .W_Data(F),
-        .R_Data_A(R_Data_A),
-        .R_Data_B(R_Data_B),
-        .R_Data_C(R_Data_C));
+    
+    RegFile RegFile_Instance(.clk(clk),.Rst(Rst),.Write_Reg(Write_Reg),.LA(LA),.LB(LB),.LC(LC),.R_Addr_A(rn),.R_Addr_B(rm),.R_Addr_C(rs),.W_Addr(W_Addr),.W_Data(F),.R_Data_A(A),.R_Data_B(B),.R_Data_C(C));
     
     
-    always@(negedge clk)
-        if (LA) A <= R_Data_A;
-    
-    always@(negedge clk)
-        if (LB) B <= R_Data_B;
-    
-    always@(negedge clk)
-        if (LC) C <= R_Data_C;
     
     wire [7:0] Shift_Num;
     wire [31:0] Shift_Data;
-    wire [31:0] F_New;
-    wire [3:0] NZCV_New;
+    
     assign Shift_Data = rm_imm_s?{{24{1'b0}},imm12[7:0]}:B;
     assign Shift_Num  = rs_imm_s[1]?{{3{1'b0}},imm12[11:8],1'b0}:(rs_imm_s[0]?C[7:0]:{{3{1'b0}},imm5});
     assign SHIFT_OP   = DP[1]?3'b111:{type,DP[0]};
     
-    always@(*)
-    begin
-        if (OP[3] & !OP[2])
-            ALU_OP = 4'b1000>>(4-OP[1:0]);
-        else
-            ALU_OP = OP;
-    end
     
-     ALU_barrelShifter ALU_barrelShifter_Instance(
-        .clk(clk),
-        .Rst(Rst),
-        .SHIFT_OP(SHIFT_OP),
-        .Shift_Data(Shift_Data),
-        .Shift_Num(Shift_Num),
-        .ALU_OP(ALU_OP),
-        .A_New(A),
-        .CF(NZCV[1]),
-        .VF(NZCV[0]),
-        .NZCV(NZCV),
-        .F(F),
-        .S(S),
-        .LF(LF),
-        .Shift_Out(Shift_Out),
-        .ALU_A_s(ALU_A_s),
-        .ALU_B_s(ALU_B_s),
-        .PC(PC),
-        .imm24(imm24)
-     );
+    ALU_barrelShifter ALU_barrelShifter_Instance(.clk(clk),.Rst(Rst),.SHIFT_OP(SHIFT_OP),.Shift_Data(Shift_Data),.Shift_Num(Shift_Num),.ALU_OP(ALU_OP),.A_New(A),.CF(NZCV[1]),.VF(NZCV[0]),.NZCV(NZCV),.F(F),.S(S),.LF(LF),.Shift_Out(Shift_Out),.ALU_A_s(ALU_A_s),.ALU_B_s(ALU_B_s),.PC(PC),.imm24(imm24));
     
-localparam Idle = 4'd0;
+    
+    localparam Idle = 4'd0;
     localparam S0   = 4'd1;
     localparam S1   = 4'd2;
     localparam S2   = 4'd3;
@@ -167,7 +123,7 @@ localparam Idle = 4'd0;
     localparam S11  = 4'd12;
     reg [3:0] ST,Next_ST;
     
-    always@(posedge clk or posedge Rst)//状�?转移
+    always@(posedge clk or posedge Rst)//状�?转移
     begin
         if (Rst)
             ST <= Idle;
@@ -176,7 +132,7 @@ localparam Idle = 4'd0;
     end
     
     
-    always@(*)
+    always@(*)//次�?函数
     begin
         Next_ST = Idle;
         case(ST)
@@ -202,7 +158,7 @@ localparam Idle = 4'd0;
     end
     
     
-    always@(posedge clk or posedge Rst)
+    always@(posedge clk or posedge Rst)//�"出函数
     begin
         if (Rst)
         begin
@@ -276,7 +232,7 @@ localparam Idle = 4'd0;
                 S3:begin
                     Write_PC  <= 1'b0;
                     Write_IR  <= 1'b0;
-                    Write_Reg <= !OP[3] | OP[2];//1000-1011四个指令�?写入rd
+                    Write_Reg <= !OP[3] | OP[2];//1000-1011四个指令�?写入rd
                     LA        <= 1'b0;
                     LB        <= 1'b0;
                     LC        <= 1'b0;
@@ -364,5 +320,6 @@ localparam Idle = 4'd0;
         end
         
     end
+    
     
 endmodule

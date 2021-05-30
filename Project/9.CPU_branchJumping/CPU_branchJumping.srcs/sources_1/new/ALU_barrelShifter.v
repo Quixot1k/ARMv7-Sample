@@ -29,7 +29,8 @@ module ALU_barrelShifter(
     
     ALU ALU_Instance(
         .ALU_OP(ALU_OP),
-        .A(A),.B(B),
+        .A(A),
+        .B(B),
         .Shift_Carry_Out(Shift_Carry_Out),
         .CF(CF),
         .VF(VF),

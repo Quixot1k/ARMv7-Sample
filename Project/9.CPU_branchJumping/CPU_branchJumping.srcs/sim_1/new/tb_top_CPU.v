@@ -1,6 +1,7 @@
 `timescale 1ns / 1ps
 
-module tb_top_CPU.();
+module tb_top_CPU();
+
     wire [31:0] Inst,A,B,C,F,Shift_Out;
     wire [3:0] NZCV;
     wire [5:0] Inst_Addr;
@@ -14,7 +15,7 @@ module tb_top_CPU.();
     reg clk;
     reg Rst;
 
-    top_CPU top_CPU_instantance.(
+    top_CPU top_CPU_instantance(
         .clk(clk),
         .Rst(Rst),
         .Inst(Inst),
@@ -47,11 +48,13 @@ module tb_top_CPU.();
     initial
     begin
         clk=0; 
-        Rst=1;   #100; 
+        Rst=1;   
+        #50; 
         Rst=0; 
     end
     always
     begin
-        #100 clk=~clk;
+        #50 
+        clk=~clk;
     end
 endmodule

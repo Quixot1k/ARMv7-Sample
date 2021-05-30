@@ -7,16 +7,16 @@ module Inst_Mod(
     input Write_PC,
     input Write_IR,
     input [3:0] NZCV, // from CSPR[32:28]
-    input [1:0] PC_s,
     input [31:0] B, F,
+    input [1:0] PC_s,
     // output
     output flag,
     output [7:2] Inst_Addr,
     output  [31:28] cond, 
-    output [27:0] IR
+    output [27:0] IR,
+    output [31:0] PC
 );
 
-wire [31:0] PC;
 wire [31:0] Inst;
 wire [31:0] IR_complete;
 
@@ -30,9 +30,9 @@ PC PC_Instance(
     .clk(clk),
     .Rst(Rst),
     .Write_PC(Write_PC),
-    .B(B),
-    .F(F),
     .PC_s(PC_s),
+    .B(B), 
+    .F(F),
     // output
     .PC(PC)
 );

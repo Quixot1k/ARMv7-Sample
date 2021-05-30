@@ -1,5 +1,5 @@
 verilog xil_defaultlib  \
-"../../../../CPU_branchJumping.gen/sources_1/ip/Inst_ROM/sim/Inst_ROM.v" \
+"../../../ip/Inst_ROM/sim/Inst_ROM.v" \
 
 verilog xil_defaultlib "glbl.v"
 

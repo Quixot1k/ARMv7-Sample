@@ -1,0 +1,16 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.ip_user_files/ip/Inst_ROM/sim/Inst_ROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Inst_ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.srcs/sources_1/new/ALU_barrelShifter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_barrelShifter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.srcs/sources_1/new/Inst_Mod_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Inst_Mod_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.srcs/sources_1/new/RegFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.srcs/sources_1/new/barrelShifter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module barrelShifter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.srcs/sources_1/new/top_CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.srcs/sim_1/new/tb_top_CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top_CPU

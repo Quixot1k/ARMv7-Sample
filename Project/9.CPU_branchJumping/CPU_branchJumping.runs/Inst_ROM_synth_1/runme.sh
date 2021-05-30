@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1'
+HD_PWD='C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
