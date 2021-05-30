@@ -22,5 +22,3 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gao/Desktop/Computer-Orgni
 INFO: [VRFC 10-311] analyzing module top_CPU
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/8.CPU_dataProcesssing/CPU_dataProcesssing.srcs/sim_1/new/tb_top_CPU.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_top_CPU
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/8.CPU_dataProcesssing/CPU_dataProcesssing.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
