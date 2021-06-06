@@ -139,7 +139,7 @@ module top_CPU(
     localparam S1   = 3'd2;
     localparam S2   = 3'd3;
     localparam S3   = 3'd4;
-    reg [2:0] ST,Next_ST;
+    reg [2:0] ST, Next_ST;
     
     always@(posedge clk or posedge Rst)//状�?转移
     begin

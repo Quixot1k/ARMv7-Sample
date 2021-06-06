@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
 -- Date        : Mon May 31 02:36:13 2021
 -- Host        : GAO-PC running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top Inst_ROM -prefix
+--               Inst_ROM_ Inst_ROM_stub.vhdl
 -- Design      : Inst_ROM
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tfgg484-2L

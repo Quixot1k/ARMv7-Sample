@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM.tcl"
+  variable script "C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,9 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "Inst_ROM_synth_1" START { ROLLUP_AUTO }
-set_param synth.incrementalSynthesisCache C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/.Xil/Vivado-15460-GAO-PC/incrSyn
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -82,17 +79,17 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.cache/wt [current_project]
-set_property parent.project_path C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.cache/wt [current_project]
+set_property parent.project_path C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.xpr [current_project]
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.cache/ip [current_project]
+set_property ip_output_repo c:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.srcs/sources_1/ip/Inst_ROM/Inst_ROM.xci
-set_property used_in_implementation false [get_files -all c:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.srcs/sources_1/ip/Inst_ROM/Inst_ROM_ooc.xdc]
+read_ip -quiet C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.srcs/sources_1/ip/Inst_ROM/Inst_ROM.xci
+set_property used_in_implementation false [get_files -all c:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.srcs/sources_1/ip/Inst_ROM/Inst_ROM_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -108,7 +105,7 @@ set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 OPTRACE "Configure IP Cache" START { }
 
-set cached_ip [config_ip_cache -export -no_bom  -dir C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1 -new_name Inst_ROM -ip [get_ips Inst_ROM]]
+set cached_ip [config_ip_cache -export -no_bom  -dir C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1 -new_name Inst_ROM -ip [get_ips Inst_ROM]]
 
 OPTRACE "Configure IP Cache" END { }
 if { $cached_ip eq {} } {
@@ -163,25 +160,25 @@ create_report "Inst_ROM_synth_1_synth_report_utilization_0" "report_utilization 
 OPTRACE "synth reports" END { }
 
 if { [catch {
-  write_verilog -force -mode synth_stub C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM_stub.v
+  write_verilog -force -mode synth_stub C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM_stub.vhdl
+  write_vhdl -force -mode synth_stub C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM_sim_netlist.v
+  write_verilog -force -mode funcsim C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -192,37 +189,37 @@ if { [catch {
 
 }; # end if cached_ip 
 
-add_files C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM_stub.v -of_objects [get_files c:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.srcs/sources_1/ip/Inst_ROM/Inst_ROM.xci]
+add_files C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM_stub.v -of_objects [get_files C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.srcs/sources_1/ip/Inst_ROM/Inst_ROM.xci]
 
-add_files C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM_stub.vhdl -of_objects [get_files c:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.srcs/sources_1/ip/Inst_ROM/Inst_ROM.xci]
+add_files C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM_stub.vhdl -of_objects [get_files C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.srcs/sources_1/ip/Inst_ROM/Inst_ROM.xci]
 
-add_files C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM_sim_netlist.v -of_objects [get_files c:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.srcs/sources_1/ip/Inst_ROM/Inst_ROM.xci]
+add_files C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM_sim_netlist.v -of_objects [get_files C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.srcs/sources_1/ip/Inst_ROM/Inst_ROM.xci]
 
-add_files C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM_sim_netlist.vhdl -of_objects [get_files c:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.srcs/sources_1/ip/Inst_ROM/Inst_ROM.xci]
+add_files C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM_sim_netlist.vhdl -of_objects [get_files C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.srcs/sources_1/ip/Inst_ROM/Inst_ROM.xci]
 
-add_files C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM.dcp -of_objects [get_files c:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.srcs/sources_1/ip/Inst_ROM/Inst_ROM.xci]
+add_files C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM.dcp -of_objects [get_files C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.srcs/sources_1/ip/Inst_ROM/Inst_ROM.xci]
 
-if {[file isdir C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.ip_user_files/ip/Inst_ROM]} {
+if {[file isdir C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.ip_user_files/ip/Inst_ROM]} {
   catch { 
-    file copy -force C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM_sim_netlist.v C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.ip_user_files/ip/Inst_ROM
+    file copy -force C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM_sim_netlist.v C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.ip_user_files/ip/Inst_ROM
   }
 }
 
-if {[file isdir C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.ip_user_files/ip/Inst_ROM]} {
+if {[file isdir C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.ip_user_files/ip/Inst_ROM]} {
   catch { 
-    file copy -force C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM_sim_netlist.vhdl C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.ip_user_files/ip/Inst_ROM
+    file copy -force C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM_sim_netlist.vhdl C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.ip_user_files/ip/Inst_ROM
   }
 }
 
-if {[file isdir C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.ip_user_files/ip/Inst_ROM]} {
+if {[file isdir C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.ip_user_files/ip/Inst_ROM]} {
   catch { 
-    file copy -force C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM_stub.v C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.ip_user_files/ip/Inst_ROM
+    file copy -force C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM_stub.v C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.ip_user_files/ip/Inst_ROM
   }
 }
 
-if {[file isdir C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.ip_user_files/ip/Inst_ROM]} {
+if {[file isdir C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.ip_user_files/ip/Inst_ROM]} {
   catch { 
-    file copy -force C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM_stub.vhdl C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/9.CPU_branchJumping/CPU_branchJumping.ip_user_files/ip/Inst_ROM
+    file copy -force C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.runs/Inst_ROM_synth_1/Inst_ROM_stub.vhdl C:/Users/yanweipeng/Desktop/9.CPU_branchJumping/CPU_branchJumping.ip_user_files/ip/Inst_ROM
   }
 }
 file delete __synthesis_is_running__

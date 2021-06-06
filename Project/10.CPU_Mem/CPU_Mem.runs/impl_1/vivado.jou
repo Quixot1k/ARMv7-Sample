@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Jun  7 01:48:37 2021
+# Process ID: 8276
+# Current directory: C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.runs/impl_1
+# Command line: vivado.exe -log top_CPU.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_CPU.tcl -notrace
+# Log file: C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.runs/impl_1/top_CPU.vdi
+# Journal file: C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source top_CPU.tcl -notrace

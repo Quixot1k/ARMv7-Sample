@@ -1,0 +1,19 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../CPU_Mem.gen/sources_1/ip/Data_RAM/sim/Data_RAM.v" \
+"../../../../CPU_Mem.gen/sources_1/ip/Inst_ROM/sim/Inst_ROM.v" \
+"../../../../CPU_Mem.srcs/sources_1/new/ALU.v" \
+"../../../../CPU_Mem.srcs/sources_1/new/ALU_barrelShifter.v" \
+"../../../../CPU_Mem.srcs/sources_1/new/Inst_Mod.v" \
+"../../../../CPU_Mem.srcs/sources_1/new/Inst_Reg.v" \
+"../../../../CPU_Mem.srcs/sources_1/new/PC.v" \
+"../../../../CPU_Mem.srcs/sources_1/new/RegFile.v" \
+"../../../../CPU_Mem.srcs/sources_1/new/barrelShifter.v" \
+"../../../../CPU_Mem.srcs/sources_1/new/top_CPU.v" \
+"../../../../CPU_Mem.srcs/sim_1/new/tb_top_CPU.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
