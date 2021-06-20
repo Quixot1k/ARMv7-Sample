@@ -10,6 +10,7 @@ module PC(
 );
     wire [31:0] PC_New;
     assign PC_New = PC + 4;
+    
     always@(negedge clk or posedge Rst) begin 
         if(Rst) begin
             PC <= 0;

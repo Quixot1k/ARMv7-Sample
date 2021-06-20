@@ -8,11 +8,11 @@ module Board(sw, swb, led, clk, which, seg, enable);
     output [2:0] which;
     output [7:0] seg;
     output reg enable = 1;
-    wire [31:0] I,A,B,C,F,Shift_Out,PC;
+    wire [31:0] Inst,A,B,C,F,Shift_Out,PC;
     reg [32:0] data;
     reg [2:0]cnt = 0;
     wire [3:0] NZCV;
-    wire [5:0] Inst_addr;
+    wire [5:0] Inst_Addr;
     wire LA,LB,LC,LF;
     wire Write_PC,Write_IR,Write_Reg,S;
     wire rm_imm_s;
@@ -23,38 +23,40 @@ module Board(sw, swb, led, clk, which, seg, enable);
     wire [1:0] test;
     wire [3:0] NZCV_New;
     
-    top_CPU top_CPU_Instance(swb[1],       //????
-            swb[2],      //????
-            I,         //??????
-            A,
-            B,
-            C,
-            F,
-            NZCV,
-            Inst_addr, //PC??????
-            Write_PC,
-            Write_IR,
-            Write_Reg,
-            LA,
-            LB,
-            LC,
-            LF,
-            rm_imm_s,
-            rs_imm_s,
-            ALU_OP,
-            SHIFT_OP,
-            S,
-            Shift_Out,
-            PC_s,
-            rd_s,
-            ALU_A_s,
-            ALU_B_s,
-            PC);
+    top_CPU top_CPU_Instance(
+            .clk(swb[1]),       //????
+            .Rst(swb[2]),      //????
+            .Inst(Inst),         //??????
+            .A(A),
+            .B(B),
+            .C(C),
+            .F(F),
+            .NZCV(NZCV),
+            .Inst_Addr(Inst_Addr), //PC??????
+            .Write_PC(Write_PC),
+            .Write_IR(Write_IR),
+            .Write_Reg(Write_Reg),
+            .LA(LA),
+            .LB(LB),
+            .LC(LC),
+            .LF(LF),
+            .rm_imm_s(rm_imm_s),
+            .rs_imm_s(rs_imm_s),
+            .ALU_OP(ALU_OP),
+            .SHIFT_OP(SHIFT_OP),
+            .S(S),
+            .Shift_Out(Shift_Out),
+            .PC_s(PC_s),
+            .rd_s(rd_s),
+            .ALU_A_s(ALU_A_s),
+            .ALU_B_s(ALU_B_s),
+            .PC(PC)
+    );
     
     always @(posedge swb[6])
     begin
         case(cnt)
-            0:begin data <= {I}; end
+            0:begin data <= {Inst}; end
             1:begin data <= {A}; end
             2:begin data <= {B}; end
             3:begin data <= {C}; end

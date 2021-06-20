@@ -2,15 +2,15 @@
 2020.2
 Nov 18 2020
 09:47:47
-C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.gen/sources_1/ip/Data_RAM/sim/Data_RAM.v,1623003138,verilog,,C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.gen/sources_1/ip/Inst_ROM/sim/Inst_ROM.v,,Data_RAM,,,,,,,,
-C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.gen/sources_1/ip/Inst_ROM/sim/Inst_ROM.v,1623000861,verilog,,C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.srcs/sources_1/new/ALU.v,,Inst_ROM,,,,,,,,
+C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.gen/sources_1/ip/Data_RAM/sim/Data_RAM.v,1623864782,verilog,,C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.gen/sources_1/ip/Inst_ROM/sim/Inst_ROM.v,,Data_RAM,,,,,,,,
+C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.gen/sources_1/ip/Inst_ROM/sim/Inst_ROM.v,1623864785,verilog,,C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.srcs/sources_1/new/ALU.v,,Inst_ROM,,,,,,,,
 C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,,,,,,,
-C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.srcs/sim_1/new/tb_top_CPU.v,1623004506,verilog,,,,tb_top_CPU,,,,,,,,
+C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.srcs/sim_1/new/tb_top_CPU.v,1623774393,verilog,,,,tb_top_CPU,,,,,,,,
 C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.srcs/sources_1/new/ALU.v,1622999807,verilog,,C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.srcs/sources_1/new/ALU_barrelShifter.v,,ALU,,,,,,,,
 C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.srcs/sources_1/new/ALU_barrelShifter.v,1623003316,verilog,,C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.srcs/sources_1/new/Inst_Mod.v,,ALU_barrelShifter,,,,,,,,
 C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.srcs/sources_1/new/Inst_Mod.v,1622999310,verilog,,C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.srcs/sources_1/new/Inst_Reg.v,,Inst_Mod,,,,,,,,
 C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.srcs/sources_1/new/Inst_Reg.v,1622999280,verilog,,C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.srcs/sources_1/new/PC.v,,Inst_Reg,,,,,,,,
-C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.srcs/sources_1/new/PC.v,1622999244,verilog,,C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.srcs/sources_1/new/RegFile.v,,PC,,,,,,,,
+C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.srcs/sources_1/new/PC.v,1623865068,verilog,,C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.srcs/sources_1/new/RegFile.v,,PC,,,,,,,,
 C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.srcs/sources_1/new/RegFile.v,1623003603,verilog,,C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.srcs/sources_1/new/barrelShifter.v,,RegFile,,,,,,,,
 C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.srcs/sources_1/new/barrelShifter.v,1622999396,verilog,,C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.srcs/sources_1/new/top_CPU.v,,barrelShifter,,,,,,,,
-C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.srcs/sources_1/new/top_CPU.v,1623004473,verilog,,C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.srcs/sim_1/new/tb_top_CPU.v,,top_CPU,,,,,,,,
+C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.srcs/sources_1/new/top_CPU.v,1623774833,verilog,,C:/Users/gao/Desktop/Computer-Orgnization-ARM-/Project/10.CPU_Mem/CPU_Mem.srcs/sim_1/new/tb_top_CPU.v,,top_CPU,,,,,,,,
